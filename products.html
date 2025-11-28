@@ -1,271 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Browse our premium collection of hair extensions, wigs, closures and frontals. Authentic human hair from Brazil, Peru, Malaysia and more.">
-<title>Products | Top Hair Collections</title>
-<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-<header>
-<h1>Top Hair Collections</h1>
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-<a href="tracking.html">Track Delivery</a>
-</nav>
-</header>
-<main>
-<section class="products">
-<h2>Premium Hair Collection</h2>
-<p class="products-subtitle">Discover our world-class selection of authentic hair extensions</p>
-<div class="search-container">
-<input type="text" id="productSearch" placeholder="Search for hair products..." aria-label="Search products">
-<button onclick="performSearch()" class="search-btn">🔍 Search</button>
-<button onclick="clearSearch()" class="clear-btn">Clear</button>
-</div>
-<div class="products-grid">
-<div class="item">
-<span class="badge premium">Premium</span>
-<img src="images/Bone straight.jfif" alt="Bone Straight Hair" loading="lazy">
-<h3>Bone Straight</h3>
-<p>Ultra-sleek, high-quality bone straight hair with natural shine and silky texture</p>
-<p class="price">₦60,000</p>
-<button onclick="addToCart('Bone Straight',60000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Brazilian Hair" loading="lazy">
-<h3>Brazilian Straight</h3>
-<p>Luxury Brazilian hair with natural texture, long-lasting and versatile styling</p>
-<p class="price">₦35,000</p>
-<button onclick="addToCart('Brazilian Straight',35000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Peruvian Hair" loading="lazy">
-<h3>Peruvian Straight</h3>
-<p>Soft, voluminous Peruvian hair with natural flow and lightweight feel</p>
-<p class="price">₦30,000</p>
-<button onclick="addToCart('Peruvian Straight',30000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Malaysian Hair" loading="lazy">
-<h3>Malaysian Straight</h3>
-<p>Silky smooth Malaysian hair, very durable with natural luster</p>
-<p class="price">₦38,000</p>
-<button onclick="addToCart('Malaysian Straight',38000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Indian Hair" loading="lazy">
-<h3>Indian Straight</h3>
-<p>Full, thick and glossy Indian hair perfect for all occasions</p>
-<p class="price">₦28,000</p>
-<button onclick="addToCart('Indian Straight',28000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge new">New</span>
-<img src="images/images 1.jfif" alt="Vietnamese Hair" loading="lazy">
-<h3>Vietnamese Straight</h3>
-<p>Premium Vietnamese hair, thick and naturally straight with minimal shedding</p>
-<p class="price">₦45,000</p>
-<button onclick="addToCart('Vietnamese Straight',45000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge bestseller">Bestseller</span>
-<img src="images/images 1.jfif" alt="Body Wave Hair" loading="lazy">
-<h3>Body Wave</h3>
-<p>Elegant body wave with soft texture and natural bounce</p>
-<p class="price">₦36,000</p>
-<button onclick="addToCart('Body Wave',36000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/Brazilian Deep wave wig.jfif" alt="Deep Wave Hair" loading="lazy">
-<h3>Deep Wave</h3>
-<p>Rich deep waves with full body and luxurious volume</p>
-<p class="price">₦40,000</p>
-<button onclick="addToCart('Deep Wave',40000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/Brazilian Deep wave wig.jfif" alt="Water Wave Hair" loading="lazy">
-<h3>Water Wave</h3>
-<p>Wet and wavy texture with natural beach wave pattern</p>
-<p class="price">₦42,000</p>
-<button onclick="addToCart('Water Wave',42000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/Brazilian Deep wave wig.jfif" alt="Loose Wave Hair" loading="lazy">
-<h3>Loose Wave</h3>
-<p>Soft loose waves for a natural, effortless look</p>
-<p class="price">₦37,000</p>
-<button onclick="addToCart('Loose Wave',37000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge new">New</span>
-<img src="images/Brazilian Deep wave wig.jfif" alt="Ocean Wave Hair" loading="lazy">
-<h3>Ocean Wave</h3>
-<p>Romantic ocean wave pattern with natural movement</p>
-<p class="price">₦39,000</p>
-<button onclick="addToCart('Ocean Wave',39000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Curly Hair" loading="lazy">
-<h3>Kinky Curly</h3>
-<p>Bouncy kinky curls with natural volume and definition</p>
-<p class="price">₦42,000</p>
-<button onclick="addToCart('Kinky Curly',42000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Jerry Curl Hair" loading="lazy">
-<h3>Jerry Curl</h3>
-<p>Tight spiral curls with glossy finish and bounce</p>
-<p class="price">₦44,000</p>
-<button onclick="addToCart('Jerry Curl',44000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Afro Kinky Hair" loading="lazy">
-<h3>Afro Kinky</h3>
-<p>Natural afro texture, perfect for protective styling</p>
-<p class="price">₦48,000</p>
-<button onclick="addToCart('Afro Kinky',48000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge bestseller">Bestseller</span>
-<img src="images/images 1.jfif" alt="Spiral Curl Hair" loading="lazy">
-<h3>Spiral Curl</h3>
-<p>Defined spiral curls with long-lasting bounce</p>
-<p class="price">₦46,000</p>
-<button onclick="addToCart('Spiral Curl',46000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Loose Curl Hair" loading="lazy">
-<h3>Loose Curl</h3>
-<p>Soft loose curls for a romantic, voluminous look</p>
-<p class="price">₦41,000</p>
-<button onclick="addToCart('Loose Curl',41000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge premium">Premium</span>
-<img src="images/images 1.jfif" alt="Closure & Frontals" loading="lazy">
-<h3>HD Lace Closure</h3>
-<p>Invisible HD lace closure with natural hairline, 4x4 size</p>
-<p class="price">₦25,000</p>
-<button onclick="addToCart('HD Lace Closure',25000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge premium">Premium</span>
-<img src="images/images 1.jfif" alt="Lace Frontal" loading="lazy">
-<h3>13x4 Lace Frontal</h3>
-<p>Ear-to-ear lace frontal with natural hairline and baby hair</p>
-<p class="price">₦32,000</p>
-<button onclick="addToCart('13x4 Lace Frontal',32000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="360 Frontal" loading="lazy">
-<h3>360 Lace Frontal</h3>
-<p>Full 360 lace frontal for versatile styling options</p>
-<p class="price">₦38,000</p>
-<button onclick="addToCart('360 Lace Frontal',38000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge new">New</span>
-<img src="images/images 1.jfif" alt="Full Lace Wig" loading="lazy">
-<h3>Full Lace Wig</h3>
-<p>100% hand-tied full lace wig with natural scalp appearance</p>
-<p class="price">₦85,000</p>
-<button onclick="addToCart('Full Lace Wig',85000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge bestseller">Bestseller</span>
-<img src="images/images 1.jfif" alt="Lace Front Wig" loading="lazy">
-<h3>Lace Front Wig</h3>
-<p>Pre-plucked lace front wig with baby hair, ready to wear</p>
-<p class="price">₦65,000</p>
-<button onclick="addToCart('Lace Front Wig',65000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="U-Part Wig" loading="lazy">
-<h3>U-Part Wig</h3>
-<p>U-part wig for natural blend with your own hair</p>
-<p class="price">₦55,000</p>
-<button onclick="addToCart('U-Part Wig',55000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge new">New</span>
-<img src="images/images 1.jfif" alt="Bob Wig" loading="lazy">
-<h3>Bob Wig</h3>
-<p>Trendy short bob wig with natural density and texture</p>
-<p class="price">₦50,000</p>
-<button onclick="addToCart('Bob Wig',50000)">Add to Cart</button>
-</div>
-<div class="item">
-<span class="badge new">New</span>
-<img src="images/images 1.jfif" alt="Ombre Hair" loading="lazy">
-<h3>Ombre Hair</h3>
-<p>Beautiful ombre color blend from dark to light</p>
-<p class="price">₦52,000</p>
-<button onclick="addToCart('Ombre Hair',52000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Blonde Hair" loading="lazy">
-<h3>Blonde #613</h3>
-<p>Platinum blonde virgin hair, can be dyed any color</p>
-<p class="price">₦58,000</p>
-<button onclick="addToCart('Blonde #613',58000)">Add to Cart</button>
-</div>
-<div class="item">
-<img src="images/images 1.jfif" alt="Highlight Hair" loading="lazy">
-<h3>Highlight Hair</h3>
-<p>Pre-colored highlight hair with natural dimension</p>
-<p class="price">₦54,000</p>
-<button onclick="addToCart('Highlight Hair',54000)">Add to Cart</button>
-</div>
-</div>
-</section>
-<div class="cart">
-<h3>🛒 Your Shopping Cart</h3>
-<div id="cartItems"><p style="color:#999">Your cart is empty</p></div>
-<h3>Total: <span id="total">₦0</span></h3>
-<button onclick="checkout()" class="btn">Checkout</button>
-<br><br>
-<a class="btn btn-whatsapp" href="https://wa.me/2348121966147?text=Hello!%20I%20want%20to%20order%20hair%20products." target="_blank" rel="noopener">📱 Order on WhatsApp</a>
-<br><br>
-<button onclick="payOnline()" class="btn btn-pay">💳 Pay Online (Paystack)</button>
-</div>
-<section class="reviews">
-<h2>⭐ Customer Reviews</h2>
-<div class="review-box">⭐⭐⭐⭐⭐ — "Beautiful hair, very soft and long-lasting. I love it!" - <strong>Amaka O.</strong></div>
-<div class="review-box">⭐⭐⭐⭐⭐ — "Fast delivery and original quality. Highly recommended." - <strong>Blessing M.</strong></div>
-<div class="review-box">⭐⭐⭐⭐⭐ — "As a salon owner, your products are my number one choice." - <strong>Grace A.</strong></div>
-<div class="review-box">⭐⭐⭐⭐⭐ — "The bone straight is amazing! No shedding at all." - <strong>Chioma N.</strong></div>
-</section>
-</main>
-<footer>
-<div class="footer-links">
-<div class="footer-column">
-<h4>Quick Links</h4>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="about.html">About Us</a>
-<a href="contact.html">Contact</a>
-</div>
-<div class="footer-column">
-<h4>Customer Service</h4>
-<a href="tracking.html">Track Order</a>
-<a href="support.html">Help & Support</a>
-<a href="shipping.html">Shipping Policy</a>
-<a href="returns.html">Return Policy</a>
-</div>
-<div class="footer-column">
-<h4>Connect With Us</h4>
-<a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
-<a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
-<a href="mailto:baloguntemytope@gmail.com">Email Us</a>
-</div>
-</div>
-<p>&copy; 2025 Top Hair Collections — Premium Quality Worldwide</p>
-</footer>
-<script src="js/app.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Browse our premium collection of hair extensions, wigs, closures and frontals. Authentic human hair from Brazil, Peru, Malaysia and more.">
+    <title>Products | Top Hair Collections</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Top Hair Collections</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="tracking.html">Track Delivery</a>
+      </nav>
+    </header>
+    <main>
+      <section class="products">
+        <h2>Premium Hair Collection</h2>
+        <p class="products-subtitle">Discover our world-class selection of authentic hair extensions</p>
+        <div class="search-container">
+          <input type="text" id="productSearch" placeholder="Search for hair products..." aria-label="Search products">
+          <button onclick="performSearch()" class="search-btn">🔍 Search</button>
+          <button onclick="clearSearch()" class="clear-btn">Clear</button>
+        </div>
+        <div class="products-grid">
+          <div class="item">
+            <span class="badge premium">Premium</span>
+            <img src="images/Bone straight.jfif" alt="Bone Straight Hair" loading="lazy">
+            <h3>Bone Straight</h3>
+            <p>Ultra-sleek, high-quality bone straight hair with natural shine and silky texture</p>
+            <p class="price">₦60,000</p>
+            <button onclick="addToCart('Bone Straight',60000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Brazilian Hair" loading="lazy">
+            <h3>Brazilian Straight</h3>
+            <p>Luxury Brazilian hair with natural texture, long-lasting and versatile styling</p>
+            <p class="price">₦35,000</p>
+            <button onclick="addToCart('Brazilian Straight',35000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Peruvian Hair" loading="lazy">
+            <h3>Peruvian Straight</h3>
+            <p>Soft, voluminous Peruvian hair with natural flow and lightweight feel</p>
+            <p class="price">₦30,000</p>
+            <button onclick="addToCart('Peruvian Straight',30000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Malaysian Hair" loading="lazy">
+            <h3>Malaysian Straight</h3>
+            <p>Silky smooth Malaysian hair, very durable with natural luster</p>
+            <p class="price">₦38,000</p>
+            <button onclick="addToCart('Malaysian Straight',38000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Indian Hair" loading="lazy">
+            <h3>Indian Straight</h3>
+            <p>Full, thick and glossy Indian hair perfect for all occasions</p>
+            <p class="price">₦28,000</p>
+            <button onclick="addToCart('Indian Straight',28000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge new">New</span>
+            <img src="images/images 1.jfif" alt="Vietnamese Hair" loading="lazy">
+            <h3>Vietnamese Straight</h3>
+            <p>Premium Vietnamese hair, thick and naturally straight with minimal shedding</p>
+            <p class="price">₦45,000</p>
+            <button onclick="addToCart('Vietnamese Straight',45000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge bestseller">Bestseller</span>
+            <img src="images/images 1.jfif" alt="Body Wave Hair" loading="lazy">
+            <h3>Body Wave</h3>
+            <p>Elegant body wave with soft texture and natural bounce</p>
+            <p class="price">₦36,000</p>
+            <button onclick="addToCart('Body Wave',36000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/Brazilian Deep wave wig.jfif" alt="Deep Wave Hair" loading="lazy">
+            <h3>Deep Wave</h3>
+            <p>Rich deep waves with full body and luxurious volume</p>
+            <p class="price">₦40,000</p>
+            <button onclick="addToCart('Deep Wave',40000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/Brazilian Deep wave wig.jfif" alt="Water Wave Hair" loading="lazy">
+            <h3>Water Wave</h3>
+            <p>Wet and wavy texture with natural beach wave pattern</p>
+            <p class="price">₦42,000</p>
+            <button onclick="addToCart('Water Wave',42000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/Brazilian Deep wave wig.jfif" alt="Loose Wave Hair" loading="lazy">
+            <h3>Loose Wave</h3>
+            <p>Soft loose waves for a natural, effortless look</p>
+            <p class="price">₦37,000</p>
+            <button onclick="addToCart('Loose Wave',37000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge new">New</span>
+            <img src="images/Brazilian Deep wave wig.jfif" alt="Ocean Wave Hair" loading="lazy">
+            <h3>Ocean Wave</h3>
+            <p>Romantic ocean wave pattern with natural movement</p>
+            <p class="price">₦39,000</p>
+            <button onclick="addToCart('Ocean Wave',39000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Curly Hair" loading="lazy">
+            <h3>Kinky Curly</h3>
+            <p>Bouncy kinky curls with natural volume and definition</p>
+            <p class="price">₦42,000</p>
+            <button onclick="addToCart('Kinky Curly',42000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Jerry Curl Hair" loading="lazy">
+            <h3>Jerry Curl</h3>
+            <p>Tight spiral curls with glossy finish and bounce</p>
+            <p class="price">₦44,000</p>
+            <button onclick="addToCart('Jerry Curl',44000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Afro Kinky Hair" loading="lazy">
+            <h3>Afro Kinky</h3>
+            <p>Natural afro texture, perfect for protective styling</p>
+            <p class="price">₦48,000</p>
+            <button onclick="addToCart('Afro Kinky',48000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge bestseller">Bestseller</span>
+            <img src="images/images 1.jfif" alt="Spiral Curl Hair" loading="lazy">
+            <h3>Spiral Curl</h3>
+            <p>Defined spiral curls with long-lasting bounce</p>
+            <p class="price">₦46,000</p>
+            <button onclick="addToCart('Spiral Curl',46000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Loose Curl Hair" loading="lazy">
+            <h3>Loose Curl</h3>
+            <p>Soft loose curls for a romantic, voluminous look</p>
+            <p class="price">₦41,000</p>
+            <button onclick="addToCart('Loose Curl',41000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge premium">Premium</span>
+            <img src="images/images 1.jfif" alt="Closure & Frontals" loading="lazy">
+            <h3>HD Lace Closure</h3>
+            <p>Invisible HD lace closure with natural hairline, 4x4 size</p>
+            <p class="price">₦25,000</p>
+            <button onclick="addToCart('HD Lace Closure',25000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge premium">Premium</span>
+            <img src="images/images 1.jfif" alt="Lace Frontal" loading="lazy">
+            <h3>13x4 Lace Frontal</h3>
+            <p>Ear-to-ear lace frontal with natural hairline and baby hair</p>
+            <p class="price">₦32,000</p>
+            <button onclick="addToCart('13x4 Lace Frontal',32000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="360 Frontal" loading="lazy">
+            <h3>360 Lace Frontal</h3>
+            <p>Full 360 lace frontal for versatile styling options</p>
+            <p class="price">₦38,000</p>
+            <button onclick="addToCart('360 Lace Frontal',38000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge new">New</span>
+            <img src="images/images 1.jfif" alt="Full Lace Wig" loading="lazy">
+            <h3>Full Lace Wig</h3>
+            <p>100% hand-tied full lace wig with natural scalp appearance</p>
+            <p class="price">₦85,000</p>
+            <button onclick="addToCart('Full Lace Wig',85000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge bestseller">Bestseller</span>
+            <img src="images/images 1.jfif" alt="Lace Front Wig" loading="lazy">
+            <h3>Lace Front Wig</h3>
+            <p>Pre-plucked lace front wig with baby hair, ready to wear</p>
+            <p class="price">₦65,000</p>
+            <button onclick="addToCart('Lace Front Wig',65000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="U-Part Wig" loading="lazy">
+            <h3>U-Part Wig</h3>
+            <p>U-part wig for natural blend with your own hair</p>
+            <p class="price">₦55,000</p>
+            <button onclick="addToCart('U-Part Wig',55000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge new">New</span>
+            <img src="images/images 1.jfif" alt="Bob Wig" loading="lazy">
+            <h3>Bob Wig</h3>
+            <p>Trendy short bob wig with natural density and texture</p>
+            <p class="price">₦50,000</p>
+            <button onclick="addToCart('Bob Wig',50000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <span class="badge new">New</span>
+            <img src="images/images 1.jfif" alt="Ombre Hair" loading="lazy">
+            <h3>Ombre Hair</h3>
+            <p>Beautiful ombre color blend from dark to light</p>
+            <p class="price">₦52,000</p>
+            <button onclick="addToCart('Ombre Hair',52000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Blonde Hair" loading="lazy">
+            <h3>Blonde #613</h3>
+            <p>Platinum blonde virgin hair, can be dyed any color</p>
+            <p class="price">₦58,000</p>
+            <button onclick="addToCart('Blonde #613',58000)">Add to Cart</button>
+          </div>
+          <div class="item">
+            <img src="images/images 1.jfif" alt="Highlight Hair" loading="lazy">
+            <h3>Highlight Hair</h3>
+            <p>Pre-colored highlight hair with natural dimension</p>
+            <p class="price">₦54,000</p>
+            <button onclick="addToCart('Highlight Hair',54000)">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <div class="cart">
+        <h3>🛒 Your Shopping Cart</h3>
+        <div id="cartItems"><p style="color:#999">Your cart is empty</p></div>
+        <h3>Total: <span id="total">₦0</span></h3>
+        <button onclick="checkout()" class="btn">Checkout</button>
+        <br><br>
+        <a class="btn btn-whatsapp" href="https://wa.me/2348121966147?text=Hello!%20I%20want%20to%20order%20hair%20products." target="_blank" rel="noopener">📱 Order on WhatsApp</a>
+        <br><br>
+        <button onclick="payOnline()" class="btn btn-pay">💳 Pay Online (Paystack)</button>
+      </div>
+      <section class="reviews">
+        <h2>⭐ Customer Reviews</h2>
+        <div class="review-box">⭐⭐⭐⭐⭐ — "Beautiful hair, very soft and long-lasting. I love it!" - <strong>Amaka O.</strong></div>
+        <div class="review-box">⭐⭐⭐⭐⭐ — "Fast delivery and original quality. Highly recommended." - <strong>Blessing M.</strong></div>
+        <div class="review-box">⭐⭐⭐⭐⭐ — "As a salon owner, your products are my number one choice." - <strong>Grace A.</strong></div>
+        <div class="review-box">⭐⭐⭐⭐⭐ — "The bone straight is amazing! No shedding at all." - <strong>Chioma N.</strong></div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h4>Customer Service</h4>
+          <a href="tracking.html">Track Order</a>
+          <a href="support.html">Help & Support</a>
+          <a href="shipping.html">Shipping Policy</a>
+          <a href="returns.html">Return Policy</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect With Us</h4>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
+        </div>
+      </div>
+      <p>&copy; 2025 Top Hair Collections — Premium Quality Worldwide</p>
+    </footer>
+    <script src="js/app.min.js"></script>
+  </body>
 </html>
