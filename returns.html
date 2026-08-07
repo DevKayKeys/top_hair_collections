@@ -1,24 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Top Hair Collections return and refund policy - Your satisfaction is our priority.">
-    <title>Return Policy | Top Hair Collections</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pages.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top Hair Collections return and refund policy - Your satisfaction is our priority. Learn about our 7-day return policy and process.">
+  <meta name="keywords" content="return policy, refund policy, hair return, exchange policy, customer satisfaction">
+  <meta name="author" content="Top Hair Collections">
+  <meta name="theme-color" content="#c9a961">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Return Policy | Top Hair Collections">
+  <meta property="og:description" content="Top Hair Collections return and refund policy - Your satisfaction is our priority.">
+  <meta property="og:image" content="images/logo.jpeg">
+  
+  <title>Return Policy | Top Hair Collections</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+</head>
   <body>
-    <header>
-      <h1>Top Hair Collections</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="tracking.html">Track Delivery</a>
-      </nav>
-    </header>
+  <!-- Header -->
+  <header role="banner">
+    <div class="logo">
+      <a href="index.html" aria-label="Top Hair Collections Home">
+        <img src="images/logo.jpeg" alt="Top Hair Collections Logo" width="180" height="50">
+      </a>
+    </div>
+    
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Products <span class="arrow">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="products.html" role="menuitem">All Products</a>
+          <a href="straight-hair.html" role="menuitem">Straight Hair</a>
+          <a href="wavy-hair.html" role="menuitem">Wavy Hair</a>
+          <a href="curly-hair.html" role="menuitem">Curly Hair</a>
+          <a href="closures-frontals.html" role="menuitem">Closures & Frontals</a>
+          <a href="wigs.html" role="menuitem">Wigs</a>
+          <a href="colored-hair.html" role="menuitem">Colored Hair</a>
+        </div>
+      </div>
+      
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="tracking.html" class="nav-link">Track Order</a>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
     <main>
       <section class="hero-section">
         <h2>Return & Refund Policy</h2>
@@ -122,7 +166,9 @@
         </div>
       </section>
     </main>
-    <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
       <div class="footer-links">
         <div class="footer-column">
           <h4>Quick Links</h4>
@@ -140,12 +186,18 @@
         </div>
         <div class="footer-column">
           <h4>Connect With Us</h4>
-          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
         </div>
       </div>
-      <p>&copy; 2025 Top Hair Collections — Quality You Can Trust</p>
-    </footer>
-  </body>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Top Hair Collections. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js" defer></script>
+</body>
 </html>

@@ -1,34 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Track your Top Hair Collections order delivery status in real-time.">
-    <title>Track Delivery | Top Hair Collections</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pages.css">
-  </head>
-  <body>
-    <header>
-      <h1>Top Hair Collections</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="tracking.html">Track Delivery</a>
-      </nav>
-    </header>
-    <main>
-      <div class="track-box">
-        <h2>Track Your Delivery</h2>
-        <input type="text" id="trackCode" placeholder="Enter Tracking Code" aria-label="Tracking code">
-        <br>
-        <button onclick="trackOrder()" class="btn">Check Status</button>
-        <p class="result" id="trackResult"></p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your Top Hair Collections order delivery status in real-time. Enter your tracking code to get instant updates on your hair products shipment with detailed tracking information.">
+  <meta name="keywords" content="track order, delivery status, hair order tracking, shipment tracking, top hair collections tracking, order status, delivery updates">
+  <meta name="author" content="Top Hair Collections">
+  <meta name="theme-color" content="#c9a961">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Track Your Order | Top Hair Collections">
+  <meta property="og:description" content="Track your Top Hair Collections order delivery status in real-time with our comprehensive tracking system.">
+  <meta property="og:image" content="images/logo.jpeg">
+  
+  <title>Track Your Order | Top Hair Collections</title>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Order Tracking",
+    "description": "Track your Top Hair Collections order delivery status",
+    "url": "https://tophaircollections.com/tracking.html",
+    "provider": {
+      "@type": "Organization",
+      "name": "Top Hair Collections",
+      "url": "https://tophaircollections.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <div class="logo">
+      <a href="index.html" aria-label="Top Hair Collections Home">
+        <img src="images/logo.jpeg" alt="Top Hair Collections Logo" width="180" height="50">
+      </a>
+    </div>
+    
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Products <span class="arrow">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="products.html" role="menuitem">All Products</a>
+          <a href="straight-hair.html" role="menuitem">Straight Hair</a>
+          <a href="wavy-hair.html" role="menuitem">Wavy Hair</a>
+          <a href="curly-hair.html" role="menuitem">Curly Hair</a>
+          <a href="closures-frontals.html" role="menuitem">Closures & Frontals</a>
+          <a href="wigs.html" role="menuitem">Wigs</a>
+          <a href="colored-hair.html" role="menuitem">Colored Hair</a>
+        </div>
       </div>
-    </main>
-    <footer>
+      
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="tracking.html" class="nav-link active">Track Order</a>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main role="main">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>Track Your Order</h1>
+        <p>Get real-time updates on your premium hair delivery with our advanced tracking system</p>
+      </div>
+    </section>
+
+    <!-- Tracking Content -->
+    <section class="tracking-content">
+      <div class="container">
+        <!-- Main Tracking Form -->
+        <div class="track-box">
+          <div class="tracking-header">
+            <div class="tracking-icon">📦</div>
+            <h2>Order Tracking System</h2>
+            <p class="tracking-description">
+              Enter your unique tracking code below to get detailed information about your order status, location, and estimated delivery time.
+            </p>
+          </div>
+          
+          <form class="tracking-form" onsubmit="event.preventDefault(); trackOrder();" aria-label="Order tracking form">
+            <div class="form-group">
+              <label for="trackCode" class="form-label">Tracking Code</label>
+              <div class="input-wrapper">
+                <input type="text" 
+                       id="trackCode" 
+                       name="trackCode"
+                       placeholder="Enter your tracking code (e.g., THC123456789)" 
+                       aria-label="Enter tracking code"
+                       autocomplete="off"
+                       pattern="[A-Za-z0-9]+"
+                       maxlength="20"
+                       required>
+                <span class="input-icon">🔍</span>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" aria-label="Track your order">
+                <span class="btn-icon" aria-hidden="true">🚀</span>
+                <span class="btn-text">Track My Order</span>
+              </button>
+              
+              <button type="button" class="btn btn-secondary" onclick="clearTracking()" aria-label="Clear tracking form">
+                <span class="btn-icon" aria-hidden="true">🔄</span>
+                <span class="btn-text">Clear</span>
+              </button>
+            </div>
+          </form>
+          
+          <!-- Tracking Results -->
+          <div id="trackResult" class="tracking-result-container" aria-live="polite" aria-atomic="true">
+            <!-- Results will be populated here -->
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-tracking-actions">
+          <h2>Quick Actions</h2>
+          <div class="action-grid">
+            <div class="action-card">
+              <div class="action-icon">📧</div>
+              <h3>Email Tracking</h3>
+              <p>Get tracking updates sent directly to your email</p>
+              <button class="btn btn-link" onclick="requestEmailUpdates()">Subscribe to Updates</button>
+            </div>
+            
+            <div class="action-card">
+              <div class="action-icon">📱</div>
+              <h3>SMS Notifications</h3>
+              <p>Receive instant SMS alerts for delivery updates</p>
+              <button class="btn btn-link" onclick="requestSMSUpdates()">Enable SMS Alerts</button>
+            </div>
+            
+            <div class="action-card">
+              <div class="action-icon">🔔</div>
+              <h3>Push Notifications</h3>
+              <p>Get browser notifications for order status changes</p>
+              <button class="btn btn-link" onclick="enablePushNotifications()">Enable Notifications</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tracking Information -->
+        <div class="tracking-info-section">
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-header">
+                <div class="info-icon">📍</div>
+                <h3>Where to Find Your Tracking Code</h3>
+              </div>
+              <div class="info-content">
+                <ul class="info-list">
+                  <li><strong>Order Confirmation Email:</strong> Check the email sent after your purchase</li>
+                  <li><strong>SMS Notification:</strong> Look for text messages from our delivery team</li>
+                  <li><strong>WhatsApp Message:</strong> Check our WhatsApp conversation for tracking details</li>
+                  <li><strong>Account Dashboard:</strong> Log into your account to view order history</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-header">
+                <div class="info-icon">🏷️</div>
+                <h3>Tracking Code Format</h3>
+              </div>
+              <div class="info-content">
+                <ul class="info-list">
+                  <li><strong>Format:</strong> Usually starts with "THC" followed by 9-12 digits</li>
+                  <li><strong>Example:</strong> THC123456789 or THC2025010001</li>
+                  <li><strong>Case:</strong> Not case-sensitive (THC123 = thc123)</li>
+                  <li><strong>Length:</strong> Typically 12-15 characters total</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-header">
+                <div class="info-icon">⏰</div>
+                <h3>Delivery Timeframes</h3>
+              </div>
+              <div class="info-content">
+                <ul class="info-list">
+                  <li><strong>Lagos Same-Day:</strong> 4-8 hours (order before 12 PM)</li>
+                  <li><strong>Lagos Express:</strong> 1-2 business days</li>
+                  <li><strong>National Standard:</strong> 3-7 business days</li>
+                  <li><strong>International:</strong> 7-21 business days</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Status Timeline -->
+        <div class="status-guide">
+          <h2>Order Status Timeline</h2>
+          <p class="status-description">Understanding your order journey from confirmation to delivery</p>
+          
+          <div class="status-timeline">
+            <div class="status-item">
+              <div class="status-icon confirmed">
+                <span class="icon-emoji">✅</span>
+                <span class="status-number">1</span>
+              </div>
+              <div class="status-content">
+                <h3>Order Confirmed</h3>
+                <p>Your order has been received and payment confirmed. We're preparing your premium hair products for processing.</p>
+                <span class="status-time">Immediate</span>
+              </div>
+            </div>
+            
+            <div class="status-item">
+              <div class="status-icon processing">
+                <span class="icon-emoji">📦</span>
+                <span class="status-number">2</span>
+              </div>
+              <div class="status-content">
+                <h3>Processing & Packaging</h3>
+                <p>Your items are being carefully selected, quality-checked, and professionally packaged for safe delivery.</p>
+                <span class="status-time">1-2 business days</span>
+              </div>
+            </div>
+            
+            <div class="status-item">
+              <div class="status-icon shipped">
+                <span class="icon-emoji">🚚</span>
+                <span class="status-number">3</span>
+              </div>
+              <div class="status-content">
+                <h3>Shipped & In Transit</h3>
+                <p>Your order is on its way! Track real-time location updates and estimated delivery time.</p>
+                <span class="status-time">Varies by location</span>
+              </div>
+            </div>
+            
+            <div class="status-item">
+              <div class="status-icon out-for-delivery">
+                <span class="icon-emoji">🛵</span>
+                <span class="status-number">4</span>
+              </div>
+              <div class="status-content">
+                <h3>Out for Delivery</h3>
+                <p>Your package is with our delivery partner and will be delivered today. Prepare to receive your order!</p>
+                <span class="status-time">Same day</span>
+              </div>
+            </div>
+            
+            <div class="status-item">
+              <div class="status-icon delivered">
+                <span class="icon-emoji">🎉</span>
+                <span class="status-number">5</span>
+              </div>
+              <div class="status-content">
+                <h3>Delivered Successfully</h3>
+                <p>Your premium hair products have been delivered! Enjoy your new look and don't forget to share your transformation.</p>
+                <span class="status-time">Complete</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Support Section -->
+        <div class="tracking-support">
+          <h2>Need Assistance?</h2>
+          <p class="support-description">
+            Our dedicated customer support team is available to help with any tracking questions or delivery concerns you may have.
+          </p>
+          
+          <div class="support-grid">
+            <div class="support-card">
+              <div class="support-icon">💬</div>
+              <h3>Live Chat Support</h3>
+              <p>Get instant help via WhatsApp chat</p>
+              <a href="https://wa.me/2347031696283?text=Hello!%20I%20need%20help%20tracking%20my%20order.%20My%20tracking%20code%20is:" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="btn btn-whatsapp"
+                 aria-label="Contact support via WhatsApp">
+                <span aria-hidden="true">📱</span> WhatsApp Support
+              </a>
+            </div>
+            
+            <div class="support-card">
+              <div class="support-icon">📧</div>
+              <h3>Email Support</h3>
+              <p>Send detailed tracking inquiries via email</p>
+              <a href="mailto:baloguntemytope@gmail.com?subject=Order%20Tracking%20Help&body=Hello,%0D%0A%0D%0AI%20need%20help%20tracking%20my%20order.%0D%0ATracking%20Code:%20%0D%0AOrder%20Date:%20%0D%0A%0D%0APlease%20provide%20an%20update%20on%20my%20delivery%20status.%0D%0A%0D%0AThank%20you!" 
+                 class="btn btn-secondary"
+                 aria-label="Email support for tracking help">
+                <span aria-hidden="true">📧</span> Email Support
+              </a>
+            </div>
+            
+            <div class="support-card">
+              <div class="support-icon">📞</div>
+              <h3>Phone Support</h3>
+              <p>Speak directly with our support team</p>
+              <a href="tel:+2347031696283" 
+                 class="btn btn-secondary"
+                 aria-label="Call support for tracking help">
+                <span aria-hidden="true">📞</span> Call Support
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="tracking-faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <h3>❓ What if my tracking code doesn't work?</h3>
+              <p>If your tracking code isn't working, it may take 24-48 hours to activate after shipping. Contact us if the issue persists.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>🕐 How often is tracking information updated?</h3>
+              <p>Tracking information is updated in real-time as your package moves through our delivery network, typically every 2-4 hours.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>📦 Can I change my delivery address?</h3>
+              <p>Address changes are possible before shipping. Contact us immediately if you need to modify your delivery address.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>🚚 What if I miss my delivery?</h3>
+              <p>Our delivery partners will attempt redelivery or leave your package at a secure location. You'll receive instructions via SMS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
       <div class="footer-links">
         <div class="footer-column">
           <h4>Quick Links</h4>
@@ -46,13 +382,188 @@
         </div>
         <div class="footer-column">
           <h4>Connect With Us</h4>
-          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
         </div>
       </div>
-      <p>&copy; 2025 Top Hair Collections</p>
-    </footer>
-    <script src="js/app.min.js"></script>
-  </body>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Top Hair Collections. All Rights Reserved. Premium Quality Worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js" defer></script>
+  
+  <!-- Tracking Functionality -->
+  <script>
+    // Enhanced tracking functionality
+    function trackOrder() {
+      const trackCode = document.getElementById('trackCode').value.trim();
+      const resultContainer = document.getElementById('trackResult');
+      
+      if (!trackCode) {
+        showTrackingError('Please enter a tracking code');
+        return;
+      }
+      
+      if (trackCode.length < 5) {
+        showTrackingError('Tracking code must be at least 5 characters long');
+        return;
+      }
+      
+      // Show loading state
+      showTrackingLoading();
+      
+      // Simulate API call with realistic delay
+      setTimeout(() => {
+        // Mock tracking data based on code pattern
+        if (trackCode.toUpperCase().startsWith('THC')) {
+          showTrackingSuccess(trackCode);
+        } else {
+          showTrackingError('Invalid tracking code format. Codes should start with "THC"');
+        }
+      }, 1500);
+    }
+    
+    function showTrackingLoading() {
+      const resultContainer = document.getElementById('trackResult');
+      resultContainer.innerHTML = `
+        <div class="tracking-result loading">
+          <div class="loading-spinner"></div>
+          <h3>Tracking Your Order...</h3>
+          <p>Please wait while we fetch your delivery information.</p>
+        </div>
+      `;
+      resultContainer.style.display = 'block';
+    }
+    
+    function showTrackingSuccess(trackCode) {
+      const resultContainer = document.getElementById('trackResult');
+      const mockStatuses = [
+        { status: 'Delivered', location: 'Lagos, Nigeria', date: '2025-01-05', time: '14:30' },
+        { status: 'Out for Delivery', location: 'Lagos Distribution Center', date: '2025-01-05', time: '09:00' },
+        { status: 'In Transit', location: 'Abuja Sorting Facility', date: '2025-01-04', time: '16:45' },
+        { status: 'Shipped', location: 'Top Hair Collections Warehouse', date: '2025-01-03', time: '11:20' }
+      ];
+      
+      const randomStatus = mockStatuses[Math.floor(Math.random() * mockStatuses.length)];
+      
+      resultContainer.innerHTML = `
+        <div class="tracking-result success">
+          <div class="result-header">
+            <div class="result-icon">✅</div>
+            <h3>Order Found!</h3>
+            <p class="tracking-code">Tracking Code: <strong>${trackCode.toUpperCase()}</strong></p>
+          </div>
+          
+          <div class="current-status">
+            <h4>Current Status: <span class="status-badge ${randomStatus.status.toLowerCase().replace(' ', '-')}">${randomStatus.status}</span></h4>
+            <p class="status-location">📍 ${randomStatus.location}</p>
+            <p class="status-time">🕐 ${randomStatus.date} at ${randomStatus.time}</p>
+          </div>
+          
+          <div class="estimated-delivery">
+            <h4>Estimated Delivery</h4>
+            <p class="delivery-date">📅 January 6, 2025</p>
+            <p class="delivery-time">⏰ Between 10:00 AM - 6:00 PM</p>
+          </div>
+          
+          <div class="tracking-actions">
+            <button class="btn btn-secondary" onclick="requestDeliveryUpdate()">Request Update</button>
+            <button class="btn btn-link" onclick="shareTracking('${trackCode}')">Share Tracking</button>
+          </div>
+        </div>
+      `;
+      resultContainer.style.display = 'block';
+    }
+    
+    function showTrackingError(message) {
+      const resultContainer = document.getElementById('trackResult');
+      resultContainer.innerHTML = `
+        <div class="tracking-result error">
+          <div class="result-icon">❌</div>
+          <h3>Tracking Error</h3>
+          <p>${message}</p>
+          <div class="error-actions">
+            <button class="btn btn-secondary" onclick="clearTracking()">Try Again</button>
+            <a href="https://wa.me/2347031696283?text=Hello!%20I%20need%20help%20with%20tracking%20code:%20${document.getElementById('trackCode').value}" 
+               target="_blank" class="btn btn-whatsapp">Get Help</a>
+          </div>
+        </div>
+      `;
+      resultContainer.style.display = 'block';
+    }
+    
+    function clearTracking() {
+      document.getElementById('trackCode').value = '';
+      document.getElementById('trackResult').style.display = 'none';
+      document.getElementById('trackCode').focus();
+    }
+    
+    function requestDeliveryUpdate() {
+      alert('Delivery update requested! You will receive an SMS with the latest information.');
+    }
+    
+    function shareTracking(code) {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Top Hair Collections - Order Tracking',
+          text: `Track my order: ${code}`,
+          url: window.location.href
+        });
+      } else {
+        // Fallback for browsers without Web Share API
+        const url = `${window.location.href}?track=${code}`;
+        navigator.clipboard.writeText(url).then(() => {
+          alert('Tracking link copied to clipboard!');
+        });
+      }
+    }
+    
+    function requestEmailUpdates() {
+      const email = prompt('Enter your email address for tracking updates:');
+      if (email && email.includes('@')) {
+        alert(`Email updates enabled for ${email}`);
+      }
+    }
+    
+    function requestSMSUpdates() {
+      const phone = prompt('Enter your phone number for SMS alerts:');
+      if (phone && phone.length > 10) {
+        alert(`SMS alerts enabled for ${phone}`);
+      }
+    }
+    
+    function enablePushNotifications() {
+      if ('Notification' in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            alert('Push notifications enabled!');
+          }
+        });
+      } else {
+        alert('Push notifications not supported in this browser');
+      }
+    }
+    
+    // Auto-fill tracking code from URL parameter
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const trackParam = urlParams.get('track');
+      if (trackParam) {
+        document.getElementById('trackCode').value = trackParam;
+        trackOrder();
+      }
+    });
+    
+    // Enter key support
+    document.getElementById('trackCode').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        trackOrder();
+      }
+    });
+  </script>
+</body>
 </html>

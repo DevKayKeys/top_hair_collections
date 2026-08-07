@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Get help and support from Top Hair Collections. Find answers to FAQs and contact our support team.">
-    <title>Help & Support | Top Hair Collections</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pages.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get help and support from Top Hair Collections. Find answers to FAQs, contact our support team, and get assistance with your hair products.">
+  <meta name="keywords" content="help, support, FAQ, customer service, hair care, assistance">
+  <meta name="author" content="Top Hair Collections">
+  <meta name="theme-color" content="#c9a961">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Help & Support | Top Hair Collections">
+  <meta property="og:description" content="Get help and support from Top Hair Collections. Find answers to FAQs and contact our support team.">
+  <meta property="og:image" content="images/logo.jpeg">
+  
+  <title>Help & Support | Top Hair Collections</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+</head>
   <body>
-    <header>
-      <h1>Top Hair Collections</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="tracking.html">Track Delivery</a>
-      </nav>
-    </header>
+  <!-- Header -->
+  <header role="banner">
+    <div class="logo">
+      <a href="index.html" aria-label="Top Hair Collections Home">
+        <img src="images/logo.jpeg" alt="Top Hair Collections Logo" width="180" height="50">
+      </a>
+    </div>
+    
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Products <span class="arrow">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="products.html" role="menuitem">All Products</a>
+          <a href="straight-hair.html" role="menuitem">Straight Hair</a>
+          <a href="wavy-hair.html" role="menuitem">Wavy Hair</a>
+          <a href="curly-hair.html" role="menuitem">Curly Hair</a>
+          <a href="closures-frontals.html" role="menuitem">Closures & Frontals</a>
+          <a href="wigs.html" role="menuitem">Wigs</a>
+          <a href="colored-hair.html" role="menuitem">Colored Hair</a>
+        </div>
+      </div>
+      
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="tracking.html" class="nav-link">Track Order</a>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
     <main>
       <section class="hero-section">
         <h2>Help & Support Center</h2>
         <p>We're here to help! Find answers to common questions or reach out to our support team.</p>
       </section>
       <section class="content-section">
-        <h2 style="text-align:center;color:gold;margin-bottom:30px">Frequently Asked Questions</h2>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
           <div class="faq-item">
             <h3>📦 How do I place an order?</h3>
@@ -60,7 +104,7 @@
             <p>Absolutely! We ship to customers worldwide. International shipping fees and delivery times vary by destination. Contact us for a quote.</p>
           </div>
         </div>
-        <h2 style="text-align:center;color:gold;margin:60px 0 30px">Still Need Help?</h2>
+        <h2>Still Need Help?</h2>
         <div class="contact-options">
           <div class="contact-card">
             <div class="icon">💬</div>
@@ -83,7 +127,9 @@
         </div>
       </section>
     </main>
-    <footer>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
       <div class="footer-links">
         <div class="footer-column">
           <h4>Quick Links</h4>
@@ -101,12 +147,18 @@
         </div>
         <div class="footer-column">
           <h4>Connect With Us</h4>
-          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
         </div>
       </div>
-      <p>&copy; 2025 Top Hair Collections — We're Here to Help</p>
-    </footer>
-  </body>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Top Hair Collections. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/app.js" defer></script>
+</body>
 </html>

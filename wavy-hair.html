@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium wavy hair extensions - Body wave, deep wave, water wave, loose wave and ocean wave from Top Hair Collections.">
+  <meta name="keywords" content="wavy hair, body wave, deep wave, water wave, loose wave, ocean wave, hair extensions">
+  <meta name="author" content="Top Hair Collections">
+  <meta name="theme-color" content="#FFD700">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wavy Hair Collection | Top Hair Collections">
+  <meta property="og:description" content="Premium wavy hair extensions with natural movement and bounce.">
+  <meta property="og:image" content="images/logo.jpeg">
+  <title>Wavy Hair Collection | Top Hair Collections</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+</head>
+<body>
+  <header role="banner">
+    <div class="logo">
+      <a href="index.html" aria-label="Top Hair Collections Home">
+        <img src="images/logo.jpeg" alt="Top Hair Collections Logo" width="180" height="50">
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Products <span class="arrow">▾</span></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="products.html" role="menuitem">All Products</a>
+          <a href="straight-hair.html" role="menuitem">Straight Hair</a>
+          <a href="wavy-hair.html" role="menuitem" class="active">Wavy Hair</a>
+          <a href="curly-hair.html" role="menuitem">Curly Hair</a>
+          <a href="closures-frontals.html" role="menuitem">Closures &amp; Frontals</a>
+          <a href="wigs.html" role="menuitem">Wigs</a>
+          <a href="colored-hair.html" role="menuitem">Colored Hair</a>
+        </div>
+      </div>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="tracking.html" class="nav-link">Track Order</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="products" aria-labelledby="page-heading">
+      <h2 id="page-heading">Wavy Hair Collection</h2>
+      <p class="products-subtitle">Beautiful waves with natural movement and bounce</p>
+      <div class="products-grid">
+
+        <article class="item">
+          <span class="badge bestseller">Bestseller</span>
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80" alt="Body Wave Hair - elegant natural bounce" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Body Wave</h3>
+            <p>Elegant body wave with soft texture and natural bounce. Blends seamlessly for a glamorous finish.</p>
+            <div class="price-container">
+              <span class="price">₦36,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Body Wave', 36000)" class="btn-add-cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Deep Wave Hair - rich luxurious volume" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Deep Wave</h3>
+            <p>Rich deep waves with full body and luxurious volume. A showstopping texture for any occasion.</p>
+            <div class="price-container">
+              <span class="price">₦40,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Deep Wave', 40000)" class="btn-add-cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Water Wave Hair - beach wave pattern" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Water Wave</h3>
+            <p>Wet and wavy texture with a natural beach wave pattern. Effortlessly chic and versatile.</p>
+            <div class="price-container">
+              <span class="price">₦42,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Water Wave', 42000)" class="btn-add-cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Loose Wave Hair - soft natural effortless" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Loose Wave</h3>
+            <p>Soft loose waves for a natural, effortless look. Perfect for everyday glam.</p>
+            <div class="price-container">
+              <span class="price">₦37,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Loose Wave', 37000)" class="btn-add-cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <span class="badge new">New</span>
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1554519515-242161756769?w=600&q=80" alt="Ocean Wave Hair - romantic natural movement" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Ocean Wave</h3>
+            <p>Romantic ocean wave pattern with natural movement. Inspired by the sea, made for queens.</p>
+            <div class="price-container">
+              <span class="price">₦39,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Ocean Wave', 39000)" class="btn-add-cart">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <aside class="cart" role="complementary" aria-labelledby="cart-heading">
+      <h3 id="cart-heading">🛒 Your Shopping Cart</h3>
+      <div id="cartItems" aria-live="polite"><p class="empty-cart">Your cart is empty</p></div>
+      <div class="cart-total"><h4>Total: <span id="total">₦0</span></h4></div>
+      <div class="cart-actions">
+        <button onclick="checkout()" class="btn btn-primary">Checkout via WhatsApp</button>
+        <a class="btn btn-whatsapp" href="https://wa.me/2347031696283?text=Hello!%20I%20want%20to%20order%20wavy%20hair." target="_blank" rel="noopener noreferrer">📱 Order on WhatsApp</a>
+        <button onclick="payOnline()" class="btn btn-pay">💳 Pay Online</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h4>Customer Service</h4>
+          <a href="tracking.html">Track Order</a>
+          <a href="support.html">Help &amp; Support</a>
+          <a href="shipping.html">Shipping Policy</a>
+          <a href="returns.html">Return Policy</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect With Us</h4>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Top Hair Collections. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

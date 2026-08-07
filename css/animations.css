@@ -8,11 +8,11 @@
 }
 
 @keyframes wave{
-0%{opacity:1;color:#ff6bb8}
-25%{opacity:.7;color:gold}
-50%{opacity:0;color:#ff9ed4}
-75%{opacity:.7;color:gold}
-100%{opacity:1;color:#ff6bb8}
+0%{opacity:1;color:#FF69B4}
+25%{opacity:.7;color:#FFD700}
+50%{opacity:0;color:#000000}
+75%{opacity:.7;color:#FFD700}
+100%{opacity:1;color:#FF69B4}
 }
 
 @keyframes slideIn{

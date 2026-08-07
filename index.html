@@ -1,36 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Top Hair Collections - Premium quality human hair extensions, wigs, closures and frontals. Shop luxury hair from around the globe.">
-    <meta name="keywords" content="hair extensions,wigs,human hair,Brazilian hair,Peruvian hair,closures,frontals">
-    <title>Top Hair Collections - Luxury Hair For Every Queen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
-  </head>
-  <body>
-    <header>
-      <h1>Top Hair Collections</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="tracking.html">Track Delivery</a>
-      </nav>
-    </header>
-    <main>
-      <section class="hero">
-        <div>
-          <h2><span>L</span><span>u</span><span>x</span><span>u</span><span>r</span><span>y</span><span> </span><span>H</span><span>a</span><span>i</span><span>r</span><span> </span><span>F</span><span>o</span><span>r</span><span> </span><span>E</span><span>v</span><span>e</span><span>r</span><span>y</span><span> </span><span>Q</span><span>u</span><span>e</span><span>e</span><span>n</span></h2>
-          <p>Top Hair Collections delivers world-class human hair products with quality, shine, and elegance. Shop the best hair from around the globe.</p>
-          <a class="btn" href="products.html">Shop Now</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top Hair Collections - Premium quality human hair extensions, wigs, closures and frontals. Shop luxury hair with worldwide shipping.">
+  <meta name="keywords" content="hair extensions, wigs, human hair, Brazilian hair, closures, frontals, luxury hair, virgin hair">
+  <meta name="author" content="Top Hair Collections">
+  <meta name="theme-color" content="#FFD700">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Top Hair Collections - Luxury Hair For Every Queen">
+  <meta property="og:description" content="Premium quality human hair extensions, wigs, and closures. Shop luxury hair from around the globe.">
+  <meta property="og:image" content="images/logo.jpeg">
+  <title>Top Hair Collections - Luxury Hair For Every Queen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+</head>
+<body>
+  <header role="banner">
+    <div class="logo">
+      <a href="index.html" aria-label="Top Hair Collections Home">
+        <img src="images/logo.jpeg" alt="Top Hair Collections Logo" width="240" height="70">
+      </a>
+    </div>
+    <nav role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-link active">Home</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+          Products <span class="arrow">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          <a href="products.html" role="menuitem">All Products</a>
+          <a href="straight-hair.html" role="menuitem">Straight Hair</a>
+          <a href="wavy-hair.html" role="menuitem">Wavy Hair</a>
+          <a href="curly-hair.html" role="menuitem">Curly Hair</a>
+          <a href="closures-frontals.html" role="menuitem">Closures &amp; Frontals</a>
+          <a href="wigs.html" role="menuitem">Wigs</a>
+          <a href="colored-hair.html" role="menuitem">Colored Hair</a>
         </div>
-      </section>
-    </main>
-    <footer>
+      </div>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="tracking.html" class="nav-link">Track Order</a>
+    </nav>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main role="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <h1 id="hero-heading" class="hero-title">
+          <span>L</span><span>u</span><span>x</span><span>u</span><span>r</span><span>y</span><span>&nbsp;</span>
+          <span>H</span><span>a</span><span>i</span><span>r</span><span>&nbsp;</span>
+          <span>F</span><span>o</span><span>r</span><span>&nbsp;</span>
+          <span>R</span><span>o</span><span>y</span><span>a</span><span>l</span><span>t</span><span>i</span><span>e</span><span>s</span>
+        </h1>
+        <p class="hero-subtitle">Top Hair Collections delivers world-class human hair products with quality, shine, and elegance. Shop the best hair from around the globe.</p>
+        <a href="products.html" class="btn btn-primary">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" aria-label="Why choose us">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Premium Quality</h3>
+          <p>100% authentic human hair sourced from the best donors worldwide</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Fast Shipping</h3>
+          <p>Nationwide and international delivery with real-time tracking</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3>Luxury Selection</h3>
+          <p>Wide range of textures, lengths, and colors to choose from</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Quality Guarantee</h3>
+          <p>Tangle-free, natural-looking hair with a satisfaction guarantee</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Products</h2>
+      <p class="products-subtitle">Our best-selling hair extensions, handpicked for you</p>
+      <div class="products-grid">
+
+        <article class="item">
+          <span class="badge premium">Premium</span>
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Bone Straight Hair - Ultra-sleek premium quality" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Bone Straight Hair</h3>
+            <p>Ultra-sleek, high-quality bone straight hair with natural shine and silky texture.</p>
+            <div class="price-container">
+              <span class="price">₦60,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Bone Straight Hair', 60000)" class="btn-add-cart" aria-label="Add Bone Straight Hair to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <span class="badge bestseller">Bestseller</span>
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80" alt="Body Wave Hair - Elegant natural bounce" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Body Wave</h3>
+            <p>Elegant body wave with soft texture and natural bounce. Perfect for a romantic look.</p>
+            <div class="price-container">
+              <span class="price">₦36,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Body Wave', 36000)" class="btn-add-cart" aria-label="Add Body Wave to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <span class="badge new">New</span>
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80" alt="Full Lace Wig - Natural scalp appearance" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Full Lace Wig</h3>
+            <p>100% hand-tied full lace wig with a natural scalp appearance and full styling freedom.</p>
+            <div class="price-container">
+              <span class="price">₦85,000</span>
+              <span class="price-note">Each</span>
+            </div>
+            <button onclick="addToCart('Full Lace Wig', 85000)" class="btn-add-cart" aria-label="Add Full Lace Wig to cart">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80" alt="Deep Wave Hair - Rich luxurious volume" loading="lazy">
+          </div>
+          <div class="item-content">
+            <h3>Deep Wave</h3>
+            <p>Rich deep waves with full body and luxurious volume for an effortlessly glamorous style.</p>
+            <div class="price-container">
+              <span class="price">₦40,000</span>
+              <span class="price-note">Per bundle</span>
+            </div>
+            <button onclick="addToCart('Deep Wave', 40000)" class="btn-add-cart" aria-label="Add Deep Wave to cart">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+      <div style="text-align:center;margin-top:3rem">
+        <a href="products.html" class="btn btn-primary">View All Products</a>
+      </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <aside class="cart" role="complementary" aria-labelledby="cart-heading">
+      <h3 id="cart-heading">🛒 Your Shopping Cart</h3>
+      <div id="cartItems" aria-live="polite"><p class="empty-cart">Your cart is empty</p></div>
+      <div class="cart-total"><h4>Total: <span id="total" aria-label="Cart total">₦0</span></h4></div>
+      <div class="cart-actions">
+        <button onclick="checkout()" class="btn btn-primary">Checkout via WhatsApp</button>
+        <a class="btn btn-whatsapp" href="https://wa.me/2347031696283?text=Hello!%20I%20want%20to%20order%20hair%20products." target="_blank" rel="noopener noreferrer">📱 Order on WhatsApp</a>
+        <button onclick="payOnline()" class="btn btn-pay">💳 Pay Online</button>
+      </div>
+    </aside>
+
+    <!-- Reviews -->
+    <section class="reviews" aria-labelledby="reviews-heading">
+      <h2 id="reviews-heading">⭐ Customer Reviews</h2>
+      <div class="reviews-grid">
+        <article class="review-box">
+          <div class="review-rating" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-text">"Beautiful hair. The quality exceeded my expectations. I love it!"</blockquote>
+          <cite class="review-author">— <strong>Atinuke O.</strong></cite>
+        </article>
+        <article class="review-box">
+          <div class="review-rating" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-text">"I got exactly what I ordered and it surpassed my expectations. Highly recommend this brand!"</blockquote>
+          <cite class="review-author">— <strong>Oluwatosin M.</strong></cite>
+        </article>
+        <article class="review-box">
+          <div class="review-rating" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-text">"As a salon owner, this is my number one choice. Consistent quality and amazing customer service."</blockquote>
+          <cite class="review-author">— <strong>Adetutu A.</strong></cite>
+        </article>
+        <article class="review-box">
+          <div class="review-rating" aria-label="5 stars">⭐⭐⭐⭐⭐</div>
+          <blockquote class="review-text">"The bone straight is amazing! No shedding at all. Perfect texture and natural shine."</blockquote>
+          <cite class="review-author">— <strong>Esther A.</strong></cite>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
       <div class="footer-links">
         <div class="footer-column">
           <h4>Quick Links</h4>
@@ -42,18 +220,24 @@
         <div class="footer-column">
           <h4>Customer Service</h4>
           <a href="tracking.html">Track Order</a>
-          <a href="support.html">Help & Support</a>
+          <a href="support.html">Help &amp; Support</a>
           <a href="shipping.html">Shipping Policy</a>
           <a href="returns.html">Return Policy</a>
         </div>
         <div class="footer-column">
           <h4>Connect With Us</h4>
-          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://wa.me/2347031696283" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <a href="mailto:baloguntemytope@gmail.com">Email Us</a>
         </div>
       </div>
-      <p>&copy; 2025 Top Hair Collections — All Rights Reserved.</p>
-    </footer>
-  </body>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Top Hair Collections. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
 </html>
+""
