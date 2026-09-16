@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Browse our premium collection of hair bundles, wigs, closures and frontals. Authentic human hair from Brazil, Peru, Malaysia and more.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tophaircollections.com/products.html">
+<meta property="og:title" content="Shop Hair | Top Hair Collections">
+<meta property="og:description" content="Premium hair bundles, wigs, closures and frontals. 100% human hair.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tophaircollections.com/products.html">
+<meta property="og:image" content="images/new logo THC.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ff6bb8">
+<title>Shop Hair | Top Hair Collections</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+<link rel="stylesheet" href="css/main.css">
+<style>
+.hero-carousel{position:relative;width:100%;height:400px;overflow:hidden;background:var(--gray-900)}
+.hero-slides{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1);height:100%}
+.hero-slide{min-width:100%;height:100%;position:relative;display:flex;align-items:center}
+.hero-slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5)}
+.hero-slide-content{position:relative;z-index:2;padding:3rem;max-width:600px}
+.hero-slide-content .badge{display:inline-block;background:var(--pink);color:#fff;padding:.35rem 1rem;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:1rem}
+.hero-slide-content h2{font-family:var(--font-heading);font-size:2.5rem;color:#fff;line-height:1.2;margin-bottom:1rem}
+.hero-slide-content p{color:rgba(255,255,255,.9);margin-bottom:1.5rem;font-size:1.05rem}
+.carousel-nav{display:flex;align-items:center;gap:1rem;margin:1.5rem 0}
+.carousel-track{display:flex;gap:1rem;overflow-x:auto;scroll-behavior:smooth;padding:1rem 0;scroll-snap-type:x mandatory}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track .product-card{min-width:280px;scroll-snap-align:start}
+.carousel-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--gray-200);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;flex-shrink:0}
+.carousel-btn:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
+.filter-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0}
+.filter-pill{padding:.5rem 1.25rem;border-radius:20px;border:1px solid var(--gray-200);background:var(--white);cursor:pointer;font-size:.85rem;font-weight:500;transition:all .2s}
+.filter-pill:hover,.filter-pill.active{background:var(--pink);color:#fff;border-color:var(--pink)}
+.search-bar{display:flex;gap:.5rem;margin:1.5rem 0;max-width:500px}
+.search-bar input{flex:1;padding:.75rem 1rem;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:.9rem}
+.search-bar button{padding:.75rem 1.5rem;background:var(--pink);color:#fff;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600}
+.product-section{margin:3rem 0}
+.product-section-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.product-section-header h2{font-family:var(--font-heading);font-size:1.5rem}
+.product-section-header a{color:var(--pink);font-weight:500;text-decoration:none;font-size:.9rem}
+.cart-section{background:var(--gray-50);border-radius:var(--radius-lg);padding:2rem;max-width:400px;margin:2rem auto}
+.cart-section h3{margin-bottom:1rem}
+.cart-item{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--gray-100)}
+.cart-empty{color:var(--text-muted);font-style:italic}
+.btn-whatsapp{background:#25d366;color:#fff;border:none}
+.btn-pay{background:#0c1f3f;color:#fff;border:none}
+@media(max-width:768px){.hero-slide-content h2{font-size:1.8rem}.hero-slide-content{padding:1.5rem}.cart-section{max-width:100%}}
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+<span><i class="hgi hgi-truck"></i> 72-hr Delivery</span>
+<span><i class="hgi hgi-truck"></i> Free Shipping</span>
+<span><i class="hgi hgi-rotate-left"></i> 30-Day Returns</span>
+<span><i class="hgi hgi-credit-card"></i> Pay Later</span>
+<span><i class="hgi hgi-diamond-01"></i> 100% Human Hair</span>
+</div>
+
+<!-- Header -->
+<header>
+<a href="index.html" class="logo">Top Hair</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="products.html#wigs">Wigs</a>
+<a href="products.html#bundles">Bundles</a>
+<a href="products.html#closures">Closures</a>
+<a href="about.html">About</a>
+</nav>
+<div class="nav-icons">
+<a href="products.html" aria-label="Search"><i class="hgi hgi-search-01"></i></a>
+<a href="#" aria-label="Account"><i class="hgi hgi-user"></i></a>
+<a href="products.html" aria-label="Cart"><i class="hgi hgi-shopping-cart-02"></i><span class="cart-count">0</span></a>
+</div>
+</header>
+
+<main>
+
+<!-- Hero Carousel Banner -->
+<div class="hero-carousel" id="heroCarousel">
+<div class="hero-slides" id="heroSlides">
+<div class="hero-slide">
+<div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1600&h=500&fit=crop&crop=face')"></div>
+<div class="hero-slide-content">
+<span class="badge">Bestseller</span>
+<h2>Premium Hair Bundles<br>Starting from ₦45,000</h2>
+<p>100% raw human hair from Brazil, Peru, Malaysia and India. Silky, tangle-free, and built to last.</p>
+<a href="#bundles" class="btn btn-primary">Shop Bundles <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+</div>
+<div class="hero-slide">
+<div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=1600&h=500&fit=crop&crop=face')"></div>
+<div class="hero-slide-content">
+<span class="badge">New Arrival</span>
+<h2>HD Lace Wigs<br>Starting from ₦95,000</h2>
+<p>Pre-plucked, bleached knots, baby hair included. Ready to wear straight out of the box.</p>
+<a href="#wigs" class="btn btn-primary">Shop Wigs <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+</div>
+<div class="hero-slide">
+<div class="hero-slide-bg" style="background-image:url('https://images.unsplash.com/photo-1605980776566-0427bb024f65?w=1600&h=500&fit=crop&crop=face')"></div>
+<div class="hero-slide-content">
+<span class="badge">Premium</span>
+<h2>Closures &amp; Frontals<br>Starting from ₦35,000</h2>
+<p>HD lace closures and frontals for a flawless, natural-looking part every time.</p>
+<a href="#closures" class="btn btn-primary">Shop Closures <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+</div>
+</div>
+<button class="hero-arrow prev" onclick="moveHeroSlide(-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<button class="hero-arrow next" onclick="moveHeroSlide(1)"><i class="hgi hgi-arrow-right-01"></i></button>
+<div class="hero-nav" id="heroNav">
+<button class="hero-dot active" onclick="goToHeroSlide(0)"></button>
+<button class="hero-dot" onclick="goToHeroSlide(1)"></button>
+<button class="hero-dot" onclick="goToHeroSlide(2)"></button>
+</div>
+</div>
+
+<!-- Search & Filters -->
+<div class="shop-toolbar">
+<div class="search-box">
+<input type="text" id="productSearch" placeholder="Search for hair products..." aria-label="Search products">
+<button onclick="performSearch()"><i class="hgi hgi-search-01"></i> Search</button>
+<button onclick="clearSearch()" class="clear-btn">Clear</button>
+</div>
+<div class="filter-pills">
+<button class="filter-pill active" onclick="filterProducts('all',this)">All</button>
+<button class="filter-pill" onclick="filterProducts('bundles',this)">Bundles</button>
+<button class="filter-pill" onclick="filterProducts('wigs',this)">Wigs</button>
+<button class="filter-pill" onclick="filterProducts('closures',this)">Closures</button>
+<button class="filter-pill" onclick="filterProducts('straight',this)">Straight</button>
+<button class="filter-pill" onclick="filterProducts('wavy',this)">Wavy</button>
+<button class="filter-pill" onclick="filterProducts('curly',this)">Curly</button>
+</div>
+</div>
+
+<!-- Best Sellers Carousel -->
+<section class="product-section" id="bestsellers">
+<div class="product-section-header">
+<h2><i class="hgi hgi-fire-01" style="color:var(--pink)"></i> Best Sellers</h2>
+<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+<div class="carousel-wrapper">
+<button class="carousel-arrow prev" onclick="scrollCarousel('best',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<div class="carousel-track" id="bestCarousel">
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Brazilian Bone Straight" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Brazilian Bone Straight 16"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(324)</span></div>
+<div class="product-price"><span class="current">₦95,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Brazilian Bone Straight 16in',95000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=400&h=400&fit=crop&crop=center" alt="HD Lace Front Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-premium">Premium</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>HD Lace Front Wig 18"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(218)</span></div>
+<div class="product-price"><span class="current">₦185,000</span></div>
+<button class="product-add-btn" onclick="addToCart('HD Lace Front Wig 18in',185000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles wavy">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&h=400&fit=crop&crop=center" alt="Deep Wave Bundle" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Deep Wave Bundle 16"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(189)</span></div>
+<div class="product-price"><span class="current">₦80,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Deep Wave Bundle 16in',80000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="closures">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1605980776566-0427bb024f65?w=400&h=400&fit=crop&crop=center" alt="4x4 HD Lace Closure" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>4x4 HD Lace Closure 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(156)</span></div>
+<div class="product-price"><span class="current">₦35,000</span></div>
+<button class="product-add-btn" onclick="addToCart('4x4 HD Lace Closure 14in',35000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Peruvian Bone Straight" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Peruvian Bone Straight 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(142)</span></div>
+<div class="product-price"><span class="current">₦55,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Peruvian Bone Straight 12in',55000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1611042553484-d61f9d9b0b40?w=400&h=400&fit=crop&crop=center" alt="Full Lace Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-premium">Premium</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Full Lace Wig 20"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(178)</span></div>
+<div class="product-price"><span class="current">₦250,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Full Lace Wig 20in',250000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+</div>
+<button class="carousel-arrow next" onclick="scrollCarousel('best',1)"><i class="hgi hgi-arrow-right-01"></i></button>
+</div>
+</section>
+
+<!-- Straight Hair Carousel -->
+<section class="product-section" id="straight">
+<div class="product-section-header">
+<h2><i class="hgi hgi-star" style="color:var(--gold)"></i> Straight Hair</h2>
+<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+<div class="carousel-wrapper">
+<button class="carousel-arrow prev" onclick="scrollCarousel('straight',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<div class="carousel-track" id="straightCarousel">
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Brazilian Bone Straight" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Brazilian Bone Straight 16"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(324)</span></div>
+<div class="product-price"><span class="current">₦95,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Brazilian Bone Straight 16in',95000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Peruvian Bone Straight" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Peruvian Bone Straight 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(142)</span></div>
+<div class="product-price"><span class="current">₦55,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Peruvian Bone Straight 12in',55000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Malaysian Bone Straight" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Malaysian Bone Straight 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(98)</span></div>
+<div class="product-price"><span class="current">₦65,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Malaysian Bone Straight 14in',65000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles straight">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop&crop=center" alt="Indian Bone Straight" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Indian Bone Straight 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(87)</span></div>
+<div class="product-price"><span class="current">₦45,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Indian Bone Straight 12in',45000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop&crop=center" alt="Bob Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Bob Wig 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(65)</span></div>
+<div class="product-price"><span class="current">₦95,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Bob Wig 12in',95000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+</div>
+<button class="carousel-arrow next" onclick="scrollCarousel('straight',1)"><i class="hgi hgi-arrow-right-01"></i></button>
+</div>
+</section>
+
+<!-- Wavy Hair Carousel -->
+<section class="product-section" id="wavy">
+<div class="product-section-header">
+<h2><i class="hgi hgi-wave" style="color:var(--pink)"></i> Wavy Hair</h2>
+<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+<div class="carousel-wrapper">
+<button class="carousel-arrow prev" onclick="scrollCarousel('wavy',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<div class="carousel-track" id="wavyCarousel">
+
+<div class="product-card" data-category="bundles wavy">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400&h=400&fit=crop&crop=center" alt="Body Wave" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Body Wave Bundle 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(256)</span></div>
+<div class="product-price"><span class="current">₦65,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Body Wave Bundle 14in',65000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles wavy">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&h=400&fit=crop&crop=center" alt="Deep Wave" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Deep Wave Bundle 16"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(189)</span></div>
+<div class="product-price"><span class="current">₦80,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Deep Wave Bundle 16in',80000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles wavy">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400&h=400&fit=crop&crop=center" alt="Water Wave" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Water Wave Bundle 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(134)</span></div>
+<div class="product-price"><span class="current">₦65,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Water Wave Bundle 14in',65000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles wavy">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400&h=400&fit=crop&crop=center" alt="Loose Wave" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Loose Wave Bundle 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(112)</span></div>
+<div class="product-price"><span class="current">₦55,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Loose Wave Bundle 12in',55000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=center" alt="U-Part Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span><span class="product-badge badge-shipping">24hr</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>U-Part Wig 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(78)</span></div>
+<div class="product-price"><span class="current">₦120,000</span></div>
+<button class="product-add-btn" onclick="addToCart('U-Part Wig 14in',120000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+</div>
+<button class="carousel-arrow next" onclick="scrollCarousel('wavy',1)"><i class="hgi hgi-arrow-right-01"></i></button>
+</div>
+</section>
+
+<!-- Curly Hair Carousel -->
+<section class="product-section" id="curly">
+<div class="product-section-header">
+<h2><i class="hgi hgi-spiral" style="color:var(--pink)"></i> Curly &amp; Kinky</h2>
+<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+<div class="carousel-wrapper">
+<button class="carousel-arrow prev" onclick="scrollCarousel('curly',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<div class="carousel-track" id="curlyCarousel">
+
+<div class="product-card" data-category="bundles curly">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=center" alt="Kinky Curly" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Kinky Curly Bundle 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(156)</span></div>
+<div class="product-price"><span class="current">₦70,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Kinky Curly Bundle 12in',70000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles curly">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=center" alt="Jerry Curl" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Jerry Curl Bundle 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(134)</span></div>
+<div class="product-price"><span class="current">₦72,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Jerry Curl Bundle 12in',72000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="bundles curly">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=center" alt="Afro Kinky" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Afro Kinky Bundle 12"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(98)</span></div>
+<div class="product-price"><span class="current">₦68,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Afro Kinky Bundle 12in',68000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=400&fit=crop&crop=center" alt="Curly Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Kinky Curly Lace Wig</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(87)</span></div>
+<div class="product-price"><span class="current">₦70,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Kinky Curly Lace Wig',70000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="wigs">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=center" alt="Jerry Curl Wig" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-hot">Popular</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>Jerry Curl Lace Wig</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(65)</span></div>
+<div class="product-price"><span class="current">₦72,000</span></div>
+<button class="product-add-btn" onclick="addToCart('Jerry Curl Lace Wig',72000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+</div>
+<button class="carousel-arrow next" onclick="scrollCarousel('curly',1)"><i class="hgi hgi-arrow-right-01"></i></button>
+</div>
+</section>
+
+<!-- Closures & Frontals Carousel -->
+<section class="product-section" id="closures">
+<div class="product-section-header">
+<h2><i class="hgi hgi-scissors-01" style="color:var(--pink)"></i> Closures &amp; Frontals</h2>
+<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
+</div>
+<div class="carousel-wrapper">
+<button class="carousel-arrow prev" onclick="scrollCarousel('closures',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
+<div class="carousel-track" id="closuresCarousel">
+
+<div class="product-card" data-category="closures">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1605980776566-0427bb024f65?w=400&h=400&fit=crop&crop=center" alt="4x4 HD Closure" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-premium">Premium</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>4x4 HD Lace Closure 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(156)</span></div>
+<div class="product-price"><span class="current">₦35,000</span></div>
+<button class="product-add-btn" onclick="addToCart('4x4 HD Lace Closure 14in',35000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="closures">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=center" alt="13x4 Frontal" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-premium">Premium</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>13x4 Lace Frontal 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(134)</span></div>
+<div class="product-price"><span class="current">₦55,000</span></div>
+<button class="product-add-btn" onclick="addToCart('13x4 Lace Frontal 14in',55000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="closures">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&h=400&fit=crop&crop=center" alt="360 Frontal" loading="lazy">
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>360 Lace Frontal 16"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(98)</span></div>
+<div class="product-price"><span class="current">₦85,000</span></div>
+<button class="product-add-btn" onclick="addToCart('360 Lace Frontal 16in',85000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card" data-category="closures">
+<div class="product-card-img">
+<img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=center" alt="5x5 Closure" loading="lazy">
+<div class="product-badges"><span class="product-badge badge-new">New</span></div>
+<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
+</div>
+<div class="product-card-body">
+<h3>5x5 HD Lace Closure 14"</h3>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(76)</span></div>
+<div class="product-price"><span class="current">₦40,000</span></div>
+<button class="product-add-btn" onclick="addToCart('5x5 HD Lace Closure 14in',40000)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
+</div>
+</div>
+
+</div>
+<button class="carousel-arrow next" onclick="scrollCarousel('closures',1)"><i class="hgi hgi-arrow-right-01"></i></button>
+</div>
+</section>
+
+<!-- Cart Section -->
+<div style="padding:2rem">
+<div class="cart-section">
+<h3><i class="hgi hgi-shopping-cart-02"></i> Your Cart</h3>
+<div id="cartItems"><p class="cart-empty">Your cart is empty</p></div>
+<h3>Total: <span id="total">₦0</span></h3>
+<button onclick="checkout()" class="btn btn-primary" style="width:100%;margin-top:.75rem"><i class="hgi hgi-credit-card"></i> Checkout</button>
+<br><br>
+<a class="btn btn-whatsapp" href="https://wa.me/2347031696283?text=Hello!%20I%20want%20to%20order%20hair%20products." target="_blank" rel="noopener" style="width:100%"><i class="hgi hgi-whatsapp"></i> Order on WhatsApp</a>
+<br><br>
+<button onclick="payOnline()" class="btn btn-pay" style="width:100%"><i class="hgi hgi-credit-card"></i> Pay Online (Paystack)</button>
+</div>
+</div>
+
+<!-- Reviews -->
+<section class="reviews-section">
+<div class="section-header">
+<h2><i class="hgi hgi-star" style="color:var(--gold)"></i> Customer Reviews</h2>
+<p>See what our queens are saying</p>
+</div>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Beautiful hair, very soft and long-lasting. The bone straight is absolutely amazing! No shedding at all."</p>
+<div class="author">— Amaka O.</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"Fast delivery and original quality. As a salon owner, these products are my number one choice for clients."</p>
+<div class="author">— Blessing M.</div>
+</div>
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>"The HD lace front wig looks so natural! Everyone thinks it's my real hair. Highly recommended!"</p>
+<div class="author">— Grace A.</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<noscript><p style="text-align:center;padding:1rem;background:#fff0f5;color:#ff1493;">JavaScript is required for cart, search, and tracking features.</p></noscript>
+
+<!-- Footer -->
+<footer>
+<div class="footer-top">
+<div class="footer-brand">
+<a href="index.html" class="logo">Top Hair Collections</a>
+<p>Premium 100% human hair extensions, wigs, and closures. Quality you can see, texture you can feel.</p>
+<div class="footer-social">
+<a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener" aria-label="Instagram"><i class="hgi hgi-instagram"></i></a>
+<a href="https://wa.me/2347031696283" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="hgi hgi-whatsapp"></i></a>
+<a href="mailto:baloguntemytope@gmail.com" aria-label="Email"><i class="hgi hgi-mail-01"></i></a>
+</div>
+</div>
+<div class="footer-col">
+<h4>Shop</h4>
+<a href="products.html#bundles"><i class="hgi hgi-shopping-bag-02"></i> Hair Bundles</a>
+<a href="products.html#wigs"><i class="hgi hgi-user"></i> Wigs</a>
+<a href="products.html#closures"><i class="hgi hgi-scissors-01"></i> Closures</a>
+</div>
+<div class="footer-col">
+<h4>Support</h4>
+<a href="tracking.html"><i class="hgi hgi-truck"></i> Track Order</a>
+<a href="support.html"><i class="hgi hgi-headset"></i> Help Center</a>
+<a href="shipping.html"><i class="hgi hgi-package-02"></i> Shipping</a>
+<a href="returns.html"><i class="hgi hgi-rotate-left"></i> Returns</a>
+</div>
+<div class="footer-col">
+<h4>Company</h4>
+<a href="about.html"><i class="hgi hgi-information-circle"></i> About Us</a>
+<a href="contact.html"><i class="hgi hgi-phone-01"></i> Contact</a>
+</div>
+<div class="footer-col">
+<h4>Account</h4>
+<a href="#"><i class="hgi hgi-user"></i> My Account</a>
+<a href="products.html"><i class="hgi hgi-shopping-cart-02"></i> Cart</a>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 Top Hair Collections. All Rights Reserved.</p>
+<div class="footer-payments">
+<span style="font-size:.8rem;color:var(--text-muted)">Secure Payment via</span>
+<i class="hgi hgi-credit-card"></i>
+</div>
+</div>
+</footer>
+
+<script src="js/app.min.js"></script>
+<script>
+// Hero Carousel
+let heroIndex=0;
+const heroSlides=document.getElementById('heroSlides');
+const heroDots=document.querySelectorAll('.hero-dot');
+const totalHeroSlides=3;
+
+function moveHeroSlide(dir){
+heroIndex=(heroIndex+dir+totalHeroSlides)%totalHeroSlides;
+updateHeroSlide();
+}
+function goToHeroSlide(i){
+heroIndex=i;
+updateHeroSlide();
+}
+function updateHeroSlide(){
+heroSlides.style.transform=`translateX(-${heroIndex*100}%)`;
+heroDots.forEach((d,i)=>d.classList.toggle('active',i===heroIndex));
+}
+setInterval(()=>moveHeroSlide(1),5000);
+
+// Product Carousels
+function scrollCarousel(id,dir){
+const track=document.getElementById(id+'Carousel');
+if(!track)return;
+const cardWidth=track.querySelector('.product-card').offsetWidth+20;
+const scrollAmount=cardWidth*dir;
+track.scrollBy({left:scrollAmount,behavior:'smooth'});
+}
+
+// Make carousel tracks scrollable
+document.querySelectorAll('.carousel-track').forEach(track=>{
+track.style.overflowX='auto';
+track.style.scrollSnapType='x mandatory';
+track.style.scrollbarWidth='none';
+track.style.msOverflowStyle='none';
+track.querySelectorAll('.product-card').forEach(card=>{
+card.style.scrollSnapAlign='start';
+});
+});
+
+// Filter Products
+function filterProducts(cat,btn){
+document.querySelectorAll('.filter-pill').forEach(b=>b.classList.remove('active'));
+if(btn)btn.classList.add('active');
+document.querySelectorAll('.product-card').forEach(card=>{
+const c=card.getAttribute('data-category')||'';
+if(cat==='all'||c.includes(cat)){
+card.style.display='';
+}else{
+card.style.display='none';
+}
+});
+}
+
+// Search
+function performSearch(){
+const q=document.getElementById('productSearch').value.toLowerCase().trim();
+document.querySelectorAll('.product-card').forEach(card=>{
+const name=card.querySelector('h3')?.textContent.toLowerCase()||'';
+const cat=card.getAttribute('data-category')?.toLowerCase()||'';
+card.style.display=(name.includes(q)||cat.includes(q)||q==='')?'':'none';
+});
+}
+function clearSearch(){
+document.getElementById('productSearch').value='';
+document.querySelectorAll('.product-card').forEach(c=>c.style.display='');
+}
+
+// Add to Cart / Checkout / Pay (from app.min.js)
+</script>
+</body>
+</html>

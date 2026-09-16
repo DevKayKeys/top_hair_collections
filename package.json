@@ -1,0 +1,14 @@
+{
+  "name": "top-hair-collections",
+  "version": "1.0.0",
+  "description": "Premium quality human hair extensions, wigs, closures and frontals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["hair", "extensions", "wigs", "e-commerce"],
+  "author": "Top Hair Collections",
+  "license": "UNLICENSED",
+  "private": true
+}
