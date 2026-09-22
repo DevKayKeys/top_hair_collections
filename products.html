@@ -10,7 +10,7 @@
 <meta property="og:description" content="Premium hair bundles, wigs, closures and frontals. 100% human hair.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tophaircollections.com/products.html">
-<meta property="og:image" content="images/new logo THC.jpg">
+<meta property="og:image" content="images/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff6bb8">
 <title>Shop Hair | Top Hair Collections</title>
@@ -50,7 +50,65 @@
 .cart-empty{color:var(--text-muted);font-style:italic}
 .btn-whatsapp{background:#25d366;color:#fff;border:none}
 .btn-pay{background:#0c1f3f;color:#fff;border:none}
-@media(max-width:768px){.hero-slide-content h2{font-size:1.8rem}.hero-slide-content{padding:1.5rem}.cart-section{max-width:100%}}
+.hero-arrow{
+position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+width:44px;height:44px;border-radius:50%;border:none;
+background:rgba(255,255,255,.85);color:var(--text-dark);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;transition:all .2s;font-size:1.2rem;
+}
+.hero-arrow:hover{background:var(--pink);color:#fff}
+.hero-arrow.prev{left:1rem}
+.hero-arrow.next{right:1rem}
+.hero-nav{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.5rem;z-index:5}
+.hero-dot{width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.7);background:transparent;cursor:pointer;transition:all .3s}
+.hero-dot.active{background:var(--white);border-color:var(--white)}
+.carousel-wrapper{position:relative}
+.carousel-arrow{
+position:absolute;top:50%;transform:translateY(-50%);z-index:5;
+width:40px;height:40px;border-radius:50%;border:1px solid var(--gray-200);
+background:var(--white);display:flex;align-items:center;justify-content:center;
+cursor:pointer;transition:all .2s;font-size:1rem;
+}
+.carousel-arrow:hover{background:var(--pink);color:#fff;border-color:var(--pink)}
+.carousel-arrow.prev{left:-12px}
+.carousel-arrow.next{right:-12px}
+.shop-toolbar{
+display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;
+padding:1.5rem 2rem;max-width:1280px;margin:0 auto;
+}
+.search-box{display:flex;gap:.5rem;flex:1;max-width:500px}
+.search-box input{flex:1;padding:.75rem 1rem;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:.9rem}
+.search-box button{padding:.75rem 1.25rem;background:var(--pink);color:#fff;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600;white-space:nowrap}
+.search-box .clear-btn{background:var(--gray-200);color:var(--text-dark)}
+.reviews-section{padding:3rem 2rem;max-width:1280px;margin:0 auto}
+@media(max-width:768px){
+.hero-carousel{height:300px}
+.hero-slide-content h2{font-size:1.5rem}
+.hero-slide-content p{font-size:.9rem}
+.hero-slide-content{padding:1.5rem}
+.hero-slide-content .btn{padding:.6rem 1.25rem;font-size:.8rem}
+.hero-arrow{width:36px;height:36px;font-size:1rem}
+.hero-arrow.prev{left:.5rem}
+.hero-arrow.next{right:.5rem}
+.cart-section{max-width:100%;padding:1.25rem}
+.shop-toolbar{padding:1rem;gap:1rem;flex-direction:column;align-items:stretch}
+.search-box{max-width:100%}
+.filter-pills{margin:0}
+.product-section{margin:2rem 0}
+.product-section{padding:0 1rem}
+.product-section-header h2{font-size:1.2rem}
+.carousel-arrow{display:none}
+.reviews-section{padding:2rem 1rem}
+}
+@media(max-width:480px){
+.hero-carousel{height:240px}
+.hero-slide-content h2{font-size:1.2rem}
+.hero-slide-content{padding:1rem}
+.hero-nav{bottom:.75rem}
+.hero-dot{width:8px;height:8px}
+.cart-section{margin:1rem}
+}
 </style>
 </head>
 <body>
@@ -66,21 +124,39 @@
 
 <!-- Header -->
 <header>
-<a href="index.html" class="logo">Top Hair</a>
-<nav>
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileNav()">
+<span></span><span></span><span></span>
+</button>
+<nav id="desktopNav">
 <a href="index.html">Home</a>
 <a href="products.html">Shop</a>
-<a href="products.html#wigs">Wigs</a>
-<a href="products.html#bundles">Bundles</a>
-<a href="products.html#closures">Closures</a>
 <a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="tracking.html">Track Order</a>
 </nav>
-<div class="nav-icons">
-<a href="products.html" aria-label="Search"><i class="hgi hgi-search-01"></i></a>
-<a href="#" aria-label="Account"><i class="hgi hgi-user"></i></a>
-<a href="products.html" aria-label="Cart"><i class="hgi hgi-shopping-cart-02"></i><span class="cart-count">0</span></a>
-</div>
+
 </header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+<div class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><i class="hgi hgi-cancel-01"></i></button>
+<a href="index.html">Home</a>
+<div class="mobile-nav-title">Shop</div>
+<a href="products.html">All Products</a>
+<a href="products.html#straight">Bone Straight</a>
+<a href="products.html#wavy">Body Wave &amp; Deep Wave</a>
+<a href="products.html#curly">Kinky Curly</a>
+<div class="mobile-nav-title">More</div>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="tracking.html">Track Order</a>
+<a href="support.html">Help Center</a>
+<div class="mobile-cta">
+<a href="https://wa.me/2347031696283?text=Hello!%20I%20want%20to%20order%20hair%20products." target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="hgi hgi-whatsapp"></i> WhatsApp Us</a>
+</div>
+</div>
 
 <main>
 
@@ -133,9 +209,6 @@
 </div>
 <div class="filter-pills">
 <button class="filter-pill active" onclick="filterProducts('all',this)">All</button>
-<button class="filter-pill" onclick="filterProducts('bundles',this)">Bundles</button>
-<button class="filter-pill" onclick="filterProducts('wigs',this)">Wigs</button>
-<button class="filter-pill" onclick="filterProducts('closures',this)">Closures</button>
 <button class="filter-pill" onclick="filterProducts('straight',this)">Straight</button>
 <button class="filter-pill" onclick="filterProducts('wavy',this)">Wavy</button>
 <button class="filter-pill" onclick="filterProducts('curly',this)">Curly</button>
@@ -160,7 +233,7 @@
 </div>
 <div class="product-card-body">
 <h3>6x5 Ombre Platinum Blonde Balayage Loose Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(308)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(308)</span></div>
 <div class="product-price"><span class="current">$157.49</span><span class="original">$209.98</span></div>
 <button class="product-add-btn" onclick="addToCart('6x5 Ombre Platinum Blonde Balayage Wig',157.49)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -174,7 +247,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go 280% Density Old Money Bob Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(227)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(227)</span></div>
 <div class="product-price"><span class="current">$139.99</span><span class="original">$174.98</span></div>
 <button class="product-add-btn" onclick="addToCart('13x6 Three-Go 280% Density Old Money Bob Wig',139.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -188,7 +261,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Yaki Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(35)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(35)</span></div>
 <div class="product-price"><span class="current">$194.99</span><span class="original">$243.73</span></div>
 <button class="product-add-btn" onclick="addToCart('Zerowear HD Lace Yaki Body Wave Wig',194.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -202,7 +275,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Chocolate Brown Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(606)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(606)</span></div>
 <div class="product-price"><span class="current">$147.20</span><span class="original">$184.00</span></div>
 <button class="product-add-btn" onclick="addToCart('13x6 Three-Go Chocolate Brown Body Wave Wig',147.20)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -216,7 +289,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Water Wave Glueless Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(326)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(326)</span></div>
 <div class="product-price"><span class="current">$137.80</span><span class="original">$180.86</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Water Wave Glueless Wig&apos;,137.80)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -230,7 +303,7 @@
 </div>
 <div class="product-card-body">
 <h3>6x5 613 Blonde Straight Bob Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(230)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(230)</span></div>
 <div class="product-price"><span class="current">$93.99</span><span class="original">$117.48</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;6x5 613 Blonde Straight Bob Wig&apos;,93.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -259,7 +332,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear 300% Density Silky Straight HD Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(109)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(109)</span></div>
 <div class="product-price"><span class="current">$229.98</span><span class="original">$289.98</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear 300% Density Silky Straight HD Wig&apos;,229.98)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -273,7 +346,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Silky Straight Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(139)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(139)</span></div>
 <div class="product-price"><span class="current">$178.20</span><span class="original">$222.75</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear HD Lace Silky Straight Wig&apos;,178.20)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -287,7 +360,7 @@
 </div>
 <div class="product-card-body">
 <h3>6x5 613 Blonde Straight Bob Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(230)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(230)</span></div>
 <div class="product-price"><span class="current">$93.99</span><span class="original">$117.48</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;6x5 613 Blonde Straight Bob Wig&apos;,93.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -301,7 +374,7 @@
 </div>
 <div class="product-card-body">
 <h3>6x6 T Part Straight Bob Wig with Bangs</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(105)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(105)</span></div>
 <div class="product-price"><span class="current">$72.99</span><span class="original">$91.23</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;6x6 T Part Straight Bob Wig with Bangs&apos;,72.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -315,7 +388,7 @@
 </div>
 <div class="product-card-body">
 <h3>6x5 Milk Tea Brown Straight Bob Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(56)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(56)</span></div>
 <div class="product-price"><span class="current">$108.99</span><span class="original">$136.23</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;6x5 Milk Tea Brown Straight Bob Wig&apos;,108.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -344,7 +417,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(118)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(118)</span></div>
 <div class="product-price"><span class="current">$178.20</span><span class="original">$222.75</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear HD Lace Body Wave Wig&apos;,178.20)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -358,7 +431,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Body Wave Glueless Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(255)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(255)</span></div>
 <div class="product-price"><span class="current">$133.88</span><span class="original">$178.50</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Body Wave Glueless Wig&apos;,133.88)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -372,7 +445,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Ombre Honey Blonde Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(231)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(231)</span></div>
 <div class="product-price"><span class="current">$149.60</span><span class="original">$187.00</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Ombre Honey Blonde Body Wave Wig&apos;,149.60)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -386,7 +459,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Dark Copper Ginger Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(248)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(248)</span></div>
 <div class="product-price"><span class="current">$176.40</span><span class="original">$220.50</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Dark Copper Ginger Body Wave Wig&apos;,176.40)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -400,7 +473,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Blonde Highlight Loose Body Wave Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(121)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(121)</span></div>
 <div class="product-price"><span class="current">$197.07</span><span class="original">$262.76</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Blonde Highlight Loose Body Wave Wig&apos;,197.07)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -429,7 +502,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Water Wave Glueless Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(326)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(326)</span></div>
 <div class="product-price"><span class="current">$137.80</span><span class="original">$180.86</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Water Wave Glueless Wig&apos;,137.80)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -443,7 +516,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Bohemian Curl Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(62)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(62)</span></div>
 <div class="product-price"><span class="current">$184.60</span><span class="original">$230.75</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear HD Lace Bohemian Curl Wig&apos;,184.60)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -457,7 +530,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Jerry Curly Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(40)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(40)</span></div>
 <div class="product-price"><span class="current">$185.40</span><span class="original">$231.75</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear HD Lace Jerry Curly Wig&apos;,185.40)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -471,7 +544,7 @@
 </div>
 <div class="product-card-body">
 <h3>Zerowear HD Lace Afro Curly Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(44)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(44)</span></div>
 <div class="product-price"><span class="current">$180.99</span><span class="original">$226.23</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;Zerowear HD Lace Afro Curly Wig&apos;,180.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -485,7 +558,7 @@
 </div>
 <div class="product-card-body">
 <h3>13x6 Three-Go Chocolate Brown Burmese Curly Wig</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(New)</span></div>
+<div class="product-rating"><span class="stars">★★★★★</span><span class="count">(New)</span></div>
 <div class="product-price"><span class="current">$174.53</span><span class="original">$218.16</span></div>
 <button class="product-add-btn" onclick="addToCart(&apos;13x6 Three-Go Chocolate Brown Burmese Curly Wig&apos;,174.53)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
 </div>
@@ -493,77 +566,6 @@
 
 </div>
 <button class="carousel-arrow next" onclick="scrollCarousel('curly',1)"><i class="hgi hgi-arrow-right-01"></i></button>
-</div>
-</section>
-
-<!-- Closures & Frontals Carousel -->
-<section class="product-section" id="closures">
-<div class="product-section-header">
-<h2><i class="hgi hgi-scissors-01" style="color:var(--pink)"></i> Closures &amp; Frontals</h2>
-<a href="products.html" class="view-all">View All <i class="hgi hgi-arrow-right-01"></i></a>
-</div>
-<div class="carousel-wrapper">
-<button class="carousel-arrow prev" onclick="scrollCarousel('closures',-1)"><i class="hgi hgi-arrow-left-01"></i></button>
-<div class="carousel-track" id="closuresCarousel">
-
-<div class="product-card" data-category="wigs wavy">
-<div class="product-card-img">
-<img src="https://www.arabellahair.com/cdn/shop/files/Arabellahair_56_Lace_Glueless_Wig_FDM56-WIG-TP4M613-YC.jpg?v=1786066671&width=400" alt="Brown Blonde Ombre Loose Body Wave Bob Wig" loading="lazy">
-<div class="product-badges"><span class="product-badge badge-premium">Premium</span></div>
-<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
-</div>
-<div class="product-card-body">
-<h3>6x5 Brown Blonde Ombre Loose Body Wave Bob</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(164)</span></div>
-<div class="product-price"><span class="current">$104.99</span><span class="original">$131.23</span></div>
-<button class="product-add-btn" onclick="addToCart(&apos;6x5 Brown Blonde Ombre Loose Body Wave Bob&apos;,104.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
-</div>
-</div>
-
-<div class="product-card" data-category="wigs curly">
-<div class="product-card-img">
-<img src="https://www.arabellahair.com/cdn/shop/files/Arabella_Glueless_Wigs_WQ135-WIG-NC-12_1.jpg?v=1777371087&width=400" alt="Bohemian Curl Bob Wig Natural Black" loading="lazy">
-<div class="product-badges"><span class="product-badge badge-hot">Bestseller</span></div>
-<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
-</div>
-<div class="product-card-body">
-<h3>13x5 Bohemian Curl Bob Wig Natural Black</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(116)</span></div>
-<div class="product-price"><span class="current">$102.99</span><span class="original">$128.73</span></div>
-<button class="product-add-btn" onclick="addToCart(&apos;13x5 Bohemian Curl Bob Wig Natural Black&apos;,102.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
-</div>
-</div>
-
-<div class="product-card" data-category="wigs curly">
-<div class="product-card-img">
-<img src="https://www.arabellahair.com/cdn/shop/files/Arabellahair_Glueless_Wigs_WQ66-WIG-N-FST.jpg?v=1780482737&width=400" alt="6x6 Straight Bob Wig with Bangs" loading="lazy">
-<div class="product-badges"><span class="product-badge badge-new">New</span></div>
-<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
-</div>
-<div class="product-card-body">
-<h3>6x6 T Part Straight Bob Wig with Bangs</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(105)</span></div>
-<div class="product-price"><span class="current">$72.99</span><span class="original">$91.23</span></div>
-<button class="product-add-btn" onclick="addToCart(&apos;6x6 T Part Straight Bob Wig with Bangs&apos;,72.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
-</div>
-</div>
-
-<div class="product-card" data-category="wigs straight">
-<div class="product-card-img">
-<img src="https://www.arabellahair.com/cdn/shop/files/Glueless_Wig_F56-WIG-N-EC-12-_3.webp?v=1774595832&width=400" alt="6x5 Loose Wave Bob Wig Natural Black" loading="lazy">
-<div class="product-badges"><span class="product-badge badge-hot">Hot Sale</span></div>
-<div class="product-wishlist"><i class="hgi hgi-heart-01"></i></div>
-</div>
-<div class="product-card-body">
-<h3>6x5 Loose Wave Bob Wig Natural Black</h3>
-<div class="product-rating"><span class="stars">?????</span><span class="count">(154)</span></div>
-<div class="product-price"><span class="current">$85.99</span><span class="original">$114.65</span></div>
-<button class="product-add-btn" onclick="addToCart(&apos;6x5 Loose Wave Bob Wig Natural Black&apos;,85.99)"><i class="hgi hgi-shopping-cart-02"></i> Add to Cart</button>
-</div>
-</div>
-
-</div>
-<button class="carousel-arrow next" onclick="scrollCarousel('closures',1)"><i class="hgi hgi-arrow-right-01"></i></button>
 </div>
 </section>
 
@@ -591,17 +593,17 @@
 <div class="review-card">
 <div class="stars">?????</div>
 <p>"Beautiful hair, very soft and long-lasting. The bone straight is absolutely amazing! No shedding at all."</p>
-<div class="author">� Amaka O.</div>
+<div class="author">— Amaka O.</div>
 </div>
 <div class="review-card">
 <div class="stars">?????</div>
 <p>"Fast delivery and original quality. As a salon owner, these products are my number one choice for clients."</p>
-<div class="author">� Blessing M.</div>
+<div class="author">— Blessing M.</div>
 </div>
 <div class="review-card">
 <div class="stars">?????</div>
 <p>"The HD lace front wig looks so natural! Everyone thinks it's my real hair. Highly recommended!"</p>
-<div class="author">� Grace A.</div>
+<div class="author">— Grace A.</div>
 </div>
 </div>
 </section>
@@ -614,7 +616,7 @@
 <footer>
 <div class="footer-top">
 <div class="footer-brand">
-<a href="index.html" class="logo">Top Hair Collections</a>
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
 <p>Premium 100% human hair extensions, wigs, and closures. Quality you can see, texture you can feel.</p>
 <div class="footer-social">
 <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener" aria-label="Instagram"><i class="hgi hgi-instagram"></i></a>
@@ -624,9 +626,7 @@
 </div>
 <div class="footer-col">
 <h4>Shop</h4>
-<a href="products.html#bundles"><i class="hgi hgi-shopping-bag-02"></i> Hair Bundles</a>
-<a href="products.html#wigs"><i class="hgi hgi-user"></i> Wigs</a>
-<a href="products.html#closures"><i class="hgi hgi-scissors-01"></i> Closures</a>
+<a href="products.html"><i class="hgi hgi-shopping-bag-02"></i> All Products</a>
 </div>
 <div class="footer-col">
 <h4>Support</h4>
@@ -696,6 +696,23 @@ track.querySelectorAll('.product-card').forEach(card=>{
 card.style.scrollSnapAlign='start';
 });
 });
+
+// Mobile Navigation
+function toggleMobileNav(){
+const nav=document.getElementById('mobileNav');
+const overlay=document.getElementById('mobileNavOverlay');
+const hamburger=document.getElementById('hamburgerBtn');
+nav.classList.toggle('active');
+overlay.classList.toggle('active');
+hamburger.classList.toggle('active');
+document.body.style.overflow=nav.classList.contains('active')?'hidden':'';
+}
+function closeMobileNav(){
+document.getElementById('mobileNav').classList.remove('active');
+document.getElementById('mobileNavOverlay').classList.remove('active');
+document.getElementById('hamburgerBtn').classList.remove('active');
+document.body.style.overflow='';
+}
 
 // Filter Products
 function filterProducts(cat,btn){

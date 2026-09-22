@@ -10,7 +10,7 @@
 <meta property="og:description" content="Track your order delivery status in real-time.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tophaircollections.com/tracking.html">
-<meta property="og:image" content="images/new logo THC.jpg">
+<meta property="og:image" content="images/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff6bb8">
 <title>Track Delivery | Top Hair Collections</title>
@@ -31,19 +31,34 @@
 <span><i class="hgi hgi-diamond-01"></i> 100% Human Hair</span>
 </div>
 <header>
-<a href="index.html" class="logo">Top Hair</a>
-<nav>
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileNav()">
+<span></span><span></span><span></span>
+</button>
+<nav id="desktopNav">
 <a href="index.html">Home</a>
 <a href="products.html">Shop</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
 <a href="tracking.html">Track Order</a>
 </nav>
-<div class="nav-icons">
-<a href="products.html" aria-label="Search"><i class="hgi hgi-search-01"></i></a>
-<a href="products.html" aria-label="Cart"><i class="hgi hgi-shopping-cart-02"></i><span class="cart-count">0</span></a>
-</div>
+
 </header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+<div class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><i class="hgi hgi-cancel-01"></i></button>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="tracking.html">Track Order</a>
+<a href="support.html">Help Center</a>
+<div class="mobile-cta">
+<a href="products.html" class="btn btn-primary"><i class="hgi hgi-shopping-bag-02"></i> Shop Now</a>
+</div>
+</div>
 <main>
 <div class="track-box">
 <h2>Track Your Delivery</h2>
@@ -57,7 +72,7 @@
 <footer>
 <div class="footer-top">
 <div class="footer-brand">
-<a href="index.html" class="logo">Top Hair Collections</a>
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
 <p>Premium 100% human hair extensions, wigs, and closures. Quality you can see, texture you can feel.</p>
 <div class="footer-social">
 <a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener" aria-label="Instagram"><i class="hgi hgi-instagram"></i></a>
@@ -67,9 +82,7 @@
 </div>
 <div class="footer-col">
 <h4>Shop</h4>
-<a href="products.html#bundles"><i class="hgi hgi-shopping-bag-02"></i> Hair Bundles</a>
-<a href="products.html#wigs"><i class="hgi hgi-user"></i> Wigs</a>
-<a href="products.html#closures"><i class="hgi hgi-scissors-01"></i> Closures</a>
+<a href="products.html"><i class="hgi hgi-shopping-bag-02"></i> All Products</a>
 </div>
 <div class="footer-col">
 <h4>Support</h4>
@@ -98,5 +111,22 @@
 </div>
 </footer>
 <script src="js/app.min.js"></script>
+<script>
+function toggleMobileNav(){
+var nav=document.getElementById('mobileNav');
+var overlay=document.getElementById('mobileNavOverlay');
+var hamburger=document.getElementById('hamburgerBtn');
+nav.classList.toggle('active');
+overlay.classList.toggle('active');
+hamburger.classList.toggle('active');
+document.body.style.overflow=nav.classList.contains('active')?'hidden':'';
+}
+function closeMobileNav(){
+document.getElementById('mobileNav').classList.remove('active');
+document.getElementById('mobileNavOverlay').classList.remove('active');
+document.getElementById('hamburgerBtn').classList.remove('active');
+document.body.style.overflow='';
+}
+</script>
 </body>
 </html>

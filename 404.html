@@ -9,7 +9,7 @@
 <meta property="og:description" content="Page not found">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tophaircollections.com/404.html">
-<meta property="og:image" content="images/new logo THC.jpg">
+<meta property="og:image" content="images/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ff6bb8">
 <title>Page Not Found | Top Hair Collections</title>
@@ -30,19 +30,34 @@
 <span><i class="hgi hgi-diamond-01"></i> 100% Human Hair</span>
 </div>
 <header>
-<a href="index.html" class="logo">Top Hair Collections</a>
-<nav>
-<a href="index.html"><i class="hgi hgi-home-01"></i> Home</a>
-<a href="products.html"><i class="hgi hgi-shopping-bag-02"></i> Shop</a>
-<a href="about.html"><i class="hgi hgi-information-circle"></i> About</a>
-<a href="contact.html"><i class="hgi hgi-phone-01"></i> Contact</a>
-<a href="tracking.html"><i class="hgi hgi-truck"></i> Track Order</a>
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" onclick="toggleMobileNav()">
+<span></span><span></span><span></span>
+</button>
+<nav id="desktopNav">
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="tracking.html">Track Order</a>
 </nav>
-<div class="nav-icons">
-<a href="products.html" aria-label="Search"><i class="hgi hgi-search-01"></i></a>
-<a href="products.html" aria-label="Cart"><i class="hgi hgi-shopping-cart-02"></i><span class="cart-count">0</span></a>
-</div>
+
 </header>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+<div class="mobile-nav" id="mobileNav">
+<button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><i class="hgi hgi-cancel-01"></i></button>
+<a href="index.html">Home</a>
+<a href="products.html">Shop</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="tracking.html">Track Order</a>
+<a href="support.html">Help Center</a>
+<div class="mobile-cta">
+<a href="products.html" class="btn btn-primary"><i class="hgi hgi-shopping-bag-02"></i> Shop Now</a>
+</div>
+</div>
 <main>
 <section class="section error-page">
 <h2><i class="hgi hgi-ghost"></i> 404 - Page Not Found</h2>
@@ -54,35 +69,62 @@
 </section>
 </main>
 <footer>
-<div class="footer-links">
-<div class="footer-column">
-<h4>Shop</h4>
-<a href="products.html#bundles"><i class="hgi hgi-shopping-bag-02"></i> Hair Bundles</a>
-<a href="products.html#wigs"><i class="hgi hgi-user"></i> Wigs</a>
-<a href="products.html#closures"><i class="hgi hgi-scissors-01"></i> Closures &amp; Frontals</a>
+<div class="footer-top">
+<div class="footer-brand">
+<a href="index.html" class="logo"><img src="images/logo.png" alt="Top Hair Collections"></a>
+<p>Premium 100% human hair extensions, wigs, and closures. Quality you can see, texture you can feel.</p>
+<div class="footer-social">
+<a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener" aria-label="Instagram"><i class="hgi hgi-instagram"></i></a>
+<a href="https://wa.me/2347031696283" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="hgi hgi-whatsapp"></i></a>
+<a href="mailto:baloguntemytope@gmail.com" aria-label="Email"><i class="hgi hgi-mail-01"></i></a>
 </div>
-<div class="footer-column">
+</div>
+<div class="footer-col">
+<h4>Shop</h4>
+<a href="products.html"><i class="hgi hgi-shopping-bag-02"></i> All Products</a>
+</div>
+<div class="footer-col">
 <h4>Support</h4>
 <a href="tracking.html"><i class="hgi hgi-truck"></i> Track Order</a>
-<a href="support.html"><i class="hgi hgi-headset"></i> Help &amp; Support</a>
-<a href="shipping.html"><i class="hgi hgi-package-02"></i> Shipping Policy</a>
-<a href="returns.html"><i class="hgi hgi-rotate-left"></i> Return Policy</a>
+<a href="support.html"><i class="hgi hgi-headset"></i> Help Center</a>
+<a href="shipping.html"><i class="hgi hgi-package-02"></i> Shipping</a>
+<a href="returns.html"><i class="hgi hgi-rotate-left"></i> Returns</a>
 </div>
-<div class="footer-column">
+<div class="footer-col">
 <h4>Company</h4>
 <a href="about.html"><i class="hgi hgi-information-circle"></i> About Us</a>
 <a href="contact.html"><i class="hgi hgi-phone-01"></i> Contact</a>
 </div>
-<div class="footer-column">
-<h4>Connect</h4>
-<a href="https://instagram.com/Tophaircollections_" target="_blank" rel="noopener"><i class="hgi hgi-instagram"></i> Instagram</a>
-<a href="https://wa.me/2347031696283" target="_blank" rel="noopener"><i class="hgi hgi-whatsapp"></i> WhatsApp</a>
-<a href="mailto:baloguntemytope@gmail.com"><i class="hgi hgi-mail-01"></i> Email Us</a>
+<div class="footer-col">
+<h4>Account</h4>
+<a href="products.html"><i class="hgi hgi-user"></i> My Account</a>
+<a href="products.html"><i class="hgi hgi-shopping-cart-02"></i> Cart</a>
 </div>
 </div>
 <div class="footer-bottom">
 <p>&copy; 2026 Top Hair Collections. All Rights Reserved.</p>
+<div class="footer-payments">
+<span style="font-size:.8rem;color:var(--text-muted)">Secure Payment via</span>
+<i class="hgi hgi-credit-card"></i>
+</div>
 </div>
 </footer>
+<script>
+function toggleMobileNav(){
+var nav=document.getElementById('mobileNav');
+var overlay=document.getElementById('mobileNavOverlay');
+var hamburger=document.getElementById('hamburgerBtn');
+nav.classList.toggle('active');
+overlay.classList.toggle('active');
+hamburger.classList.toggle('active');
+document.body.style.overflow=nav.classList.contains('active')?'hidden':'';
+}
+function closeMobileNav(){
+document.getElementById('mobileNav').classList.remove('active');
+document.getElementById('mobileNavOverlay').classList.remove('active');
+document.getElementById('hamburgerBtn').classList.remove('active');
+document.body.style.overflow='';
+}
+</script>
 </body>
 </html>

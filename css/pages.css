@@ -271,6 +271,7 @@ background:#fff;
 border-radius:.5rem;
 overflow:hidden;
 box-shadow:var(--shadow);
+min-width:500px;
 }
 
 .shipping-table th{
@@ -389,8 +390,41 @@ justify-content:center;
 flex-wrap:wrap;
 }
 
+@media(max-width:1024px){
+.faq-container{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+}
+
 @media(max-width:768px){
 .faq-container{grid-template-columns:1fr}
 .section,.track-box{padding:2rem 1rem}
 .contact-options{flex-direction:column;align-items:center}
+.policy-section h3{font-size:1.1rem}
+.policy-section ul{padding-left:1rem}
+.policy-section li{font-size:.9rem;line-height:1.6}
+.highlight-box{padding:1rem;margin:1rem 0}
+.highlight-box h3{font-size:1.1rem}
+.highlight-box p{font-size:.9rem}
+.contact-cta,.tracking-cta{padding:1.5rem}
+.contact-cta h3,.tracking-cta h3{font-size:1.2rem}
+.contact-cta a,.tracking-cta a{display:block;text-align:center;margin:.5rem 0}
+.shipping-table{font-size:.85rem}
+.shipping-table th,.shipping-table td{padding:.625rem .5rem}
+.error-page h2{font-size:2.5rem}
+.error-page p{font-size:1rem}
+.error-page .btn-group{flex-direction:column;align-items:center}
+.error-page .btn-group .btn{width:100%;max-width:280px}
+}
+
+@media(max-width:480px){
+.section{margin:1.5rem auto;padding:1.5rem .75rem}
+.track-box{margin:1.5rem auto;padding:1.5rem .75rem}
+.hero-section{padding:2.5rem 1rem}
+.hero-section h2{font-size:1.6rem}
+.hero-section p{font-size:.9rem}
+.content-section{margin:1.5rem auto;padding:.75rem}
+.section-heading{font-size:1.3rem;margin-bottom:1.25rem}
+.contact-card{width:100%;max-width:300px}
+.info{font-size:1rem;flex-direction:column;gap:.25rem}
+.info a{word-break:break-all}
+.review-box{max-width:100%;margin:.75rem auto}
 }
