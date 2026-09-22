@@ -826,10 +826,11 @@ padding-top:1.5rem;
 max-width:var(--max-width);
 margin:0 auto;
 display:flex;
-justify-content:space-between;
+flex-direction:column;
+justify-content:center;
 align-items:center;
-flex-wrap:wrap;
-gap:1rem;
+text-align:center;
+gap:.75rem;
 }
 
 .footer-bottom p{

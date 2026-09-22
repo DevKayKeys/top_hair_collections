@@ -72,8 +72,10 @@ font-family:var(--font-heading);
 }
 
 .track-box input{
+display:block;
 padding:.75rem 1rem;
 width:min(350px,90%);
+margin:0 auto 1.5rem;
 border-radius:.375rem;
 border:2px solid var(--gray-200);
 font-size:1rem;
@@ -154,6 +156,9 @@ color:var(--primary-dark);
 margin:0 0 .625rem;
 font-size:1.15rem;
 font-family:var(--font-heading);
+display:flex;
+align-items:center;
+gap:.5rem;
 }
 
 .faq-item p{
